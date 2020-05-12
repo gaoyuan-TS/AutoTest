@@ -1,0 +1,54 @@
+2020-05-12 17:02:50,152 - INFO - 清除"用例集合"工作表测试结果中，请稍等....
+2020-05-12 17:02:50,667 - INFO - 清除"登录"工作表测试结果中，请稍等...
+2020-05-12 17:02:51,205 - INFO - 清除"Sheet1"工作表测试结果中，请稍等...
+2020-05-12 17:02:51,891 - INFO - 选择的浏览器为:FireFox浏览器
+2020-05-12 17:02:58,523 - INFO - 启动火狐浏览器
+2020-05-12 17:02:58,524 - INFO - 进入http://zs-beta.cntracechain.com/#/login
+2020-05-12 17:03:01,420 - INFO - 输入框输入gaoyuan
+2020-05-12 17:03:01,576 - INFO - 通过css定位元素#login > section > main > div > div.el-col.el-col-10 > div > div > div.login1 > form > div > div:nth-child(2) > div > div > input
+2020-05-12 17:03:01,685 - INFO - 步骤"输入账号"执行成功
+2020-05-12 17:03:02,522 - INFO - 输入框输入zs123456
+2020-05-12 17:03:02,596 - INFO - 通过css定位元素#login > section > main > div > div.el-col.el-col-10 > div > div > div.login1 > form > div > div:nth-child(3) > div > div > input
+2020-05-12 17:03:02,733 - INFO - 步骤"输入密码"执行成功
+2020-05-12 17:03:03,555 - INFO - 点击元素：#login > section > main > div > div.el-col.el-col-10 > div > div > div.login1 > form > div > div:nth-child(5) > div > button
+2020-05-12 17:03:03,636 - INFO - 通过css定位元素#login > section > main > div > div.el-col.el-col-10 > div > div > div.login1 > form > div > div:nth-child(5) > div > button
+2020-05-12 17:03:04,068 - INFO - 步骤"点击登录"执行成功
+2020-05-12 17:03:04,681 - INFO - 休眠2秒
+2020-05-12 17:03:06,683 - INFO - 步骤"休眠"执行成功
+2020-05-12 17:03:07,013 - INFO - 点击元素：/html/body/div/div/section/section/div/div/main/div[2]/div[1]/div[2]/div[1]/span[1]
+2020-05-12 17:03:07,084 - INFO - 通过xpath定位元素/html/body/div/div/section/section/div/div/main/div[2]/div[1]/div[2]/div[1]/span[1]
+2020-05-12 17:03:07,620 - INFO - 步骤"点击商家资料"执行成功
+2020-05-12 17:03:08,330 - INFO - 休眠2秒
+2020-05-12 17:03:10,332 - INFO - 步骤"休眠"执行成功
+2020-05-12 17:03:10,930 - INFO - 点击元素：/html/body/div/div/section/section/div/div/main/div[2]/div[1]/button/span
+2020-05-12 17:03:11,009 - INFO - 通过xpath定位元素/html/body/div/div/section/section/div/div/main/div[2]/div[1]/button/span
+2020-05-12 17:03:11,826 - INFO - 步骤"点击编辑"执行成功
+2020-05-12 17:03:12,198 - INFO - 输入框输入编辑商家资料
+2020-05-12 17:03:12,215 - INFO - 通过xpath定位元素/html/body/div[1]/div/section/section/div/div/main/div[2]/div[2]/div[1]/div[2]/div/input
+2020-05-12 17:03:12,283 - INFO - 步骤"编辑商家资料"执行成功
+2020-05-12 17:03:12,779 - INFO - 输入框输入编辑商家地址
+2020-05-12 17:03:12,805 - INFO - 通过xpath定位元素/html/body/div[1]/div/section/section/div/div/main/div[2]/div[2]/div[4]/div[2]/div/input
+2020-05-12 17:03:12,916 - INFO - 步骤"编辑商家地址"执行成功
+2020-05-12 17:03:13,379 - INFO - 输入框输入编辑经营品种
+2020-05-12 17:03:13,438 - INFO - 通过xpath定位元素/html/body/div[1]/div/section/section/div/div/main/div[2]/div[2]/div[4]/div[4]/div/textarea
+2020-05-12 17:03:13,519 - INFO - 步骤"编辑经营品种"执行成功
+2020-05-12 17:03:13,921 - INFO - 输入框输入编辑法人代表
+2020-05-12 17:03:13,968 - INFO - 通过xpath定位元素/html/body/div[1]/div/section/section/div/div/main/div[2]/div[2]/div[5]/div[2]/div/input
+2020-05-12 17:03:14,050 - INFO - 步骤"编辑法人代表"执行成功
+2020-05-12 17:03:14,512 - INFO - 输入框输入13211111111
+2020-05-12 17:03:14,553 - INFO - 通过xpath定位元素/html/body/div/div/section/section/div/div/main/div[2]/div[2]/div[5]/div[4]/div/input
+2020-05-12 17:03:14,629 - INFO - 步骤"编辑电话号码"执行成功
+2020-05-12 17:03:15,110 - INFO - 输入框输入www.baidu.com
+2020-05-12 17:03:15,151 - INFO - 通过xpath定位元素/html/body/div/div/section/section/div/div/main/div[2]/div[2]/div[7]/div[2]/div/input
+2020-05-12 17:03:15,230 - INFO - 步骤"编辑销售网址"执行成功
+2020-05-12 17:03:15,772 - INFO - 输入框输入编辑商家介绍
+2020-05-12 17:03:15,819 - INFO - 通过xpath定位元素/html/body/div/div/section/section/div/div/main/div[2]/div[2]/div[8]/div[2]/div/textarea
+2020-05-12 17:03:15,895 - INFO - 步骤"编辑商家介绍"执行成功
+2020-05-12 17:03:16,351 - INFO - 点击元素：/html/body/div/div/section/section/div/div/main/div[2]/div[2]/div[14]/button[2]/span
+2020-05-12 17:03:16,386 - INFO - 通过xpath定位元素/html/body/div/div/section/section/div/div/main/div[2]/div[2]/div[14]/button[2]/span
+2020-05-12 17:03:16,510 - INFO - 步骤"取消"执行成功
+2020-05-12 17:03:17,258 - INFO - 休眠2秒
+2020-05-12 17:03:19,258 - INFO - 步骤"休眠"执行成功
+2020-05-12 17:03:19,636 - INFO - 关闭浏览器
+2020-05-12 17:03:23,023 - INFO - 正在写入测试结果，请勿关闭界面...
+2020-05-12 17:03:25,586 - INFO - 用例测试结束

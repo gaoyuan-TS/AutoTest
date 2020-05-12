@@ -1,17 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="c64e82f5-9d3c-42ee-a78b-fd5b7b7275ed" name="Default Changelist" comment="" />
-=======
-    <list default="true" id="c64e82f5-9d3c-42ee-a78b-fd5b7b7275ed" name="Default Changelist" comment="">
+    <list default="true" id="aa2c8734-9ba1-4d76-92ae-cc2ea2813cde" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigRead.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/action/ObjectMap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/action/PageAction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/action/WaitUnit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/action/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/action/geckodriver.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/GuiSelectValue.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/Parameter.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/TimeWait.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drivers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drivers/chrome/70.0.3538.97/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drivers/chrome/71.0.3578.137/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drivers/chrome/72.0.3626.69/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drivers/chrome/73.0.3683.68/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drivers/chrome/74.0.3729.6/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drivers/chrome/75.0.3770.140/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drivers/chrome/76.0.3809.126/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drivers/chrome/77.0.3865.40/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drivers/chrome/78.0.3904.11/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drivers/firefox/geckodriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exceltemplate/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exceltemplate/测试.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exceltemplate/测试用例模板.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exceltemplate/测试用例编写说明.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_08_10.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_08_38.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_10_08.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_12_19.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_13_04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_20_29.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_22_06.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_40_07.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_40_39.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_41_09.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_41_10.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_41_58.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_44_16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_50_28.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_52_46.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_52_47.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_54_00.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_55_48.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_55_49.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_56_15.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_56_16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_59_50.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-16_59_59.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-17_00_11.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-17_00_33.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-17_02_11.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-17_08_11.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-17_08_12.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/logger-2020-05-12-17_14_33.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/sogger-2020-05-12-14_27_12.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcase/HTMLTestRunner_cn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcase/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcase/geckodriver.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcase/runnerTestCase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/DirAndTime.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/Logger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/ParseExcel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/ParseYaml.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/ReadFile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/WriterFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoTest/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AutoTest/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/user_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/tz_django.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/tz_django.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/DateEncoder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/db.cnf" beforeDir="false" />
     </list>
->>>>>>> 7547685d039e6a86df21c4fa3babd65931a186fd
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -25,15 +111,13 @@
       </list>
     </option>
   </component>
-<<<<<<< HEAD
-  <component name="ProjectId" id="1bCINNgsXS7f0ToFiqaWFmoV9DG" />
-=======
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1bCINNgsXS7f0ToFiqaWFmoV9DG" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
->>>>>>> 7547685d039e6a86df21c4fa3babd65931a186fd
+  <component name="ProjectId" id="1bmyZERUX8Hx69QEcc2dMrDlSJE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -44,38 +128,112 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
     <property name="nodejs.protractor.protractor_package" value="" />
-<<<<<<< HEAD
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\AutoTest\apps\testcase" />
-    </key>
-=======
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
-  </component>
-  <component name="RecentsManager">
->>>>>>> 7547685d039e6a86df21c4fa3babd65931a186fd
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\AutoTest\apps" />
-      <recent name="D:\AutoTest\apps\user_app" />
+      <recent name="D:\AutoTest\testcase" />
     </key>
-<<<<<<< HEAD
-=======
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\AutoTest\apps\testcase" />
+      <recent name="D:\AutoTest\config" />
+      <recent name="D:\AutoTest\action" />
+      <recent name="D:\AutoTest\exceltemplate" />
     </key>
->>>>>>> 7547685d039e6a86df21c4fa3babd65931a186fd
   </component>
-  <component name="RunManager" selected="Django server.AutoTest">
+  <component name="RunManager" selected="Python tests.Unittests in runnerTestCase.py">
+    <configuration name="PageAction" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/action" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/action/PageAction.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ParseExcel" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/ParseExcel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ParseYaml" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/ParseYaml.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WaitUnit" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/action" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/action/WaitUnit.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="views" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="AutoTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,11 +265,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="AutoTest.settings" />
       </envs>
-<<<<<<< HEAD
-      <option name="SDK_HOME" value="C:\Users\Administrator\AppData\Local\Programs\Python\Python38\python.exe" />
-=======
-      <option name="SDK_HOME" value="D:\AutoTest\venv\Scripts\python.exe" />
->>>>>>> 7547685d039e6a86df21c4fa3babd65931a186fd
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -127,17 +281,46 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests in runnerTestCase.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/testcase/runnerTestCase.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Django server.AutoTest" />
       <item itemvalue="Python.views" />
+      <item itemvalue="Python.WaitUnit" />
+      <item itemvalue="Python.ParseYaml" />
+      <item itemvalue="Python.ParseExcel" />
+      <item itemvalue="Python.PageAction" />
+      <item itemvalue="Python tests.Unittests in runnerTestCase.py" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests in runnerTestCase.py" />
+        <item itemvalue="Python.PageAction" />
+        <item itemvalue="Python.ParseExcel" />
+        <item itemvalue="Python.ParseYaml" />
+        <item itemvalue="Python.WaitUnit" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c64e82f5-9d3c-42ee-a78b-fd5b7b7275ed" name="Default Changelist" comment="" />
+      <changelist id="aa2c8734-9ba1-4d76-92ae-cc2ea2813cde" name="Default Changelist" comment="" />
       <created>1588129607494</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -147,67 +330,34 @@
       <workItem from="1588585045393" duration="46000" />
       <workItem from="1588586004064" duration="480000" />
       <workItem from="1588586501663" duration="1340000" />
-<<<<<<< HEAD
-      <workItem from="1588756218879" duration="3952000" />
-      <workItem from="1588920815289" duration="11308000" />
+      <workItem from="1589251617992" duration="16238000" />
     </task>
     <servers />
   </component>
-=======
-      <workItem from="1588938332283" duration="6000" />
-      <workItem from="1588938394455" duration="2656000" />
-    </task>
-    <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
->>>>>>> 7547685d039e6a86df21c4fa3babd65931a186fd
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-<<<<<<< HEAD
-    <state x="553" y="140" key="#Inspections" timestamp="1588928058819">
+    <state x="321" y="119" key="#Inspections" timestamp="1589269881716">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="553" y="140" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1588928058819" />
-=======
->>>>>>> 7547685d039e6a86df21c4fa3babd65931a186fd
+    <state x="321" y="119" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1589269881716" />
     <state x="414" y="95" key="#Project_Structure" timestamp="1588585089168">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="414" y="95" key="#Project_Structure/0.0.1920.1032@0.0.1920.1032" timestamp="1588585089168" />
-<<<<<<< HEAD
-    <state x="310" y="64" width="1090" height="687" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588756312045">
+    <state x="255" y="132" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589251629533">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="310" y="64" width="1090" height="687" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1588756312045" />
-    <state x="388" y="80" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1588586466356" />
-=======
-    <state x="388" y="80" width="1090" height="687" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588938624965">
-      <screen x="0" y="0" width="1920" height="1032" />
-    </state>
-    <state x="310" y="64" width="1090" height="687" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1588153174616" />
-    <state x="388" y="80" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1588938624965" />
->>>>>>> 7547685d039e6a86df21c4fa3babd65931a186fd
+    <state x="255" y="132" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1589251629533" />
     <state x="947" y="233" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588154652923">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="947" y="233" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1588154652923" />
-<<<<<<< HEAD
-=======
-    <state x="627" y="44" key="CommitChangelistDialog2" timestamp="1588945708040">
-      <screen x="0" y="0" width="1920" height="1032" />
+    <state x="385" y="9" key="CommitChangelistDialog2" timestamp="1589278149007">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="627" y="44" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1588945708040" />
->>>>>>> 7547685d039e6a86df21c4fa3babd65931a186fd
+    <state x="385" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589278149007" />
     <state x="828" y="348" key="EnvironmentVariablesDialog" timestamp="1588153171462">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -217,115 +367,42 @@
     </state>
     <state x="355" y="322" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588209738911" />
     <state x="1048" y="192" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1588586431900" />
-<<<<<<< HEAD
-    <state width="1042" height="253" key="GridCell.Tab.0.bottom" timestamp="1588932220447">
+    <state width="1493" height="154" key="GridCell.Tab.0.bottom" timestamp="1589278149089">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1042" height="253" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588932220447" />
-    <state width="1312" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1588588989086" />
-    <state width="1042" height="253" key="GridCell.Tab.0.center" timestamp="1588932220447">
+    <state width="1493" height="154" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589278149089" />
+    <state width="1493" height="154" key="GridCell.Tab.0.center" timestamp="1589278149089">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1042" height="253" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588932220447" />
-    <state width="1312" height="237" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1588588989085" />
-    <state width="1042" height="253" key="GridCell.Tab.0.left" timestamp="1588932220447">
+    <state width="1493" height="154" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589278149089" />
+    <state width="1493" height="154" key="GridCell.Tab.0.left" timestamp="1589278149089">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1042" height="253" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588932220447" />
-    <state width="1312" height="237" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1588588989085" />
-    <state width="1042" height="253" key="GridCell.Tab.0.right" timestamp="1588932220447">
+    <state width="1493" height="154" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589278149089" />
+    <state width="1493" height="154" key="GridCell.Tab.0.right" timestamp="1589278149089">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1042" height="253" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588932220447" />
-    <state width="1312" height="237" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1588588989086" />
-    <state width="1042" height="236" key="GridCell.Tab.1.bottom" timestamp="1588760173512">
+    <state width="1493" height="154" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589278149089" />
+    <state width="1140" height="148" key="GridCell.Tab.1.bottom" timestamp="1589274592887">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1042" height="236" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588760173512" />
-    <state width="1042" height="236" key="GridCell.Tab.1.center" timestamp="1588760173512">
+    <state width="1140" height="148" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589274592887" />
+    <state width="1140" height="148" key="GridCell.Tab.1.center" timestamp="1589274592887">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1042" height="236" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588760173512" />
-    <state width="1042" height="236" key="GridCell.Tab.1.left" timestamp="1588760173512">
+    <state width="1140" height="148" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1589274592887" />
+    <state width="1140" height="148" key="GridCell.Tab.1.left" timestamp="1589274592887">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1042" height="236" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588760173512" />
-    <state width="1042" height="236" key="GridCell.Tab.1.right" timestamp="1588760173512">
+    <state width="1140" height="148" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1589274592887" />
+    <state width="1140" height="148" key="GridCell.Tab.1.right" timestamp="1589274592887">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1042" height="236" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588760173512" />
-    <state x="335" y="0" key="SettingsEditor" timestamp="1588756265628">
+    <state width="1140" height="148" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1589274592887" />
+    <state x="210" y="0" key="SettingsEditor" timestamp="1589252874770">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="335" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588756265628" />
-    <state x="419" y="0" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1588588912203" />
-    <state x="461" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1588920815094">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="461" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588920815094" />
-    <state x="711" y="183" key="run.anything.popup" timestamp="1588757292745">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="711" y="183" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1588757292745" />
-    <state x="814" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588924092982">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="814" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588924092982" />
-=======
-    <state width="656" height="237" key="GridCell.Tab.0.bottom" timestamp="1588945548739">
-      <screen x="0" y="0" width="1920" height="1032" />
-    </state>
-    <state width="966" height="245" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588241148244" />
-    <state width="656" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1588945548739" />
-    <state width="656" height="237" key="GridCell.Tab.0.center" timestamp="1588945548739">
-      <screen x="0" y="0" width="1920" height="1032" />
-    </state>
-    <state width="966" height="245" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588241148244" />
-    <state width="656" height="237" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1588945548739" />
-    <state width="656" height="237" key="GridCell.Tab.0.left" timestamp="1588945548738">
-      <screen x="0" y="0" width="1920" height="1032" />
-    </state>
-    <state width="966" height="245" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588241148244" />
-    <state width="656" height="237" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1588945548738" />
-    <state width="656" height="237" key="GridCell.Tab.0.right" timestamp="1588945548739">
-      <screen x="0" y="0" width="1920" height="1032" />
-    </state>
-    <state width="966" height="245" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588241148244" />
-    <state width="656" height="237" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1588945548739" />
-    <state width="966" height="245" key="GridCell.Tab.1.bottom" timestamp="1588241148244">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="966" height="245" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588241148244" />
-    <state width="966" height="245" key="GridCell.Tab.1.center" timestamp="1588241148244">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="966" height="245" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588241148244" />
-    <state width="966" height="245" key="GridCell.Tab.1.left" timestamp="1588241148244">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="966" height="245" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588241148244" />
-    <state width="966" height="245" key="GridCell.Tab.1.right" timestamp="1588241148244">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="966" height="245" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588241148244" />
-    <state x="223" y="83" key="SettingsEditor" timestamp="1588945485216">
-      <screen x="0" y="0" width="1920" height="1032" />
-    </state>
-    <state x="335" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588152492473" />
-    <state x="223" y="83" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1588945485216" />
-    <state x="461" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1588208930253">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="461" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588208930253" />
-    <state x="711" y="183" key="run.anything.popup" timestamp="1588209523559">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="711" y="183" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1588209523559" />
-    <state x="814" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588143858876">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="814" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588143858876" />
->>>>>>> 7547685d039e6a86df21c4fa3babd65931a186fd
+    <state x="210" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589252874770" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -336,5 +413,15 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AutoTest$views.coverage" NAME="views Coverage Results" MODIFIED="1588153177635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/user_app" />
+    <SUITE FILE_PATH="coverage/AutoTest$ParseExcel.coverage" NAME="ParseExcel Coverage Results" MODIFIED="1589271183029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/AutoTest$WaitUnit.coverage" NAME="WaitUnit Coverage Results" MODIFIED="1589269118600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/action" />
+    <SUITE FILE_PATH="coverage/AutoTest$ConfigRead.coverage" NAME="ConfigRead Coverage Results" MODIFIED="1589255172689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/AutoTest$test.coverage" NAME="test Coverage Results" MODIFIED="1589266205179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AutoTest$ParseYaml.coverage" NAME="ParseYaml Coverage Results" MODIFIED="1589270395821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/AutoTest$Unittests_in_runnerTestCase_py.coverage" NAME="Unittests in runnerTestCase.py Coverage Results" MODIFIED="1589274872170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
+    <SUITE FILE_PATH="coverage/AutoTest$Logger.coverage" NAME="Logger Coverage Results" MODIFIED="1589264831889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/AutoTest$DirAndTime.coverage" NAME="DirAndTime Coverage Results" MODIFIED="1589265226452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/AutoTest$ConfigRead__1_.coverage" NAME="ConfigRead (1) Coverage Results" MODIFIED="1589255610901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AutoTest$PageAction.coverage" NAME="PageAction Coverage Results" MODIFIED="1589271725553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/action" />
   </component>
 </project>

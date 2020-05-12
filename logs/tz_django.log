@@ -2717,3 +2717,45 @@ INFO 2020-05-08 19:59:00,555 basehttp 124 "GET /testcase/1 HTTP/1.1" 301 0
 WARNING 2020-05-08 19:59:01,304 base 93 Not Found: /testcase/1/
 WARNING 2020-05-08 19:59:01,305 basehttp 124 "GET /testcase/1/ HTTP/1.1" 404 5287
 >>>>>>> 7547685d039e6a86df21c4fa3babd65931a186fd
+INFO 2020-05-12 10:47:37,194 autoreload 598 Watching for file changes with StatReloader
+INFO 2020-05-12 10:48:29,435 basehttp 157 "GET /testcase/12/ HTTP/1.1" 200 5462
+WARNING 2020-05-12 10:48:32,225 log 222 Not Found: /testcase/
+WARNING 2020-05-12 10:48:32,226 basehttp 157 "GET /testcase/ HTTP/1.1" 404 2571
+INFO 2020-05-12 10:48:34,691 basehttp 157 "GET /testcase/list HTTP/1.1" 200 6530
+WARNING 2020-05-12 10:49:24,001 log 222 Not Found: /user/list
+WARNING 2020-05-12 10:49:24,002 basehttp 157 "GET /user/list HTTP/1.1" 404 2185
+INFO 2020-05-12 10:49:30,785 basehttp 157 "GET /users/list HTTP/1.1" 200 9029
+INFO 2020-05-12 10:50:30,341 autoreload 222 D:\AutoTest\apps\user_app\views.py changed, reloading.
+INFO 2020-05-12 10:50:32,200 autoreload 598 Watching for file changes with StatReloader
+INFO 2020-05-12 10:50:35,951 autoreload 222 D:\AutoTest\apps\user_app\views.py changed, reloading.
+INFO 2020-05-12 10:50:37,547 autoreload 598 Watching for file changes with StatReloader
+INFO 2020-05-12 10:51:18,685 autoreload 222 D:\AutoTest\apps\user_app\views.py changed, reloading.
+INFO 2020-05-12 10:51:20,509 autoreload 598 Watching for file changes with StatReloader
+WARNING 2020-05-12 10:51:40,415 log 222 Not Found: /users/delect
+WARNING 2020-05-12 10:51:40,416 basehttp 157 "GET /users/delect HTTP/1.1" 404 2924
+WARNING 2020-05-12 10:52:02,868 log 222 Not Found: /users/delect/1
+WARNING 2020-05-12 10:52:02,870 basehttp 157 "GET /users/delect/1 HTTP/1.1" 404 2930
+INFO 2020-05-12 10:52:23,427 autoreload 598 Watching for file changes with StatReloader
+WARNING 2020-05-12 10:52:29,483 log 222 Not Found: /users/delect/1
+WARNING 2020-05-12 10:52:29,484 basehttp 157 "GET /users/delect/1 HTTP/1.1" 404 2930
+WARNING 2020-05-12 10:52:31,922 log 222 Not Found: /users/delect/
+WARNING 2020-05-12 10:52:31,924 basehttp 157 "GET /users/delect/ HTTP/1.1" 404 2927
+WARNING 2020-05-12 10:52:34,604 log 222 Not Found: /users/delect/1
+WARNING 2020-05-12 10:52:34,605 basehttp 157 "GET /users/delect/1 HTTP/1.1" 404 2930
+WARNING 2020-05-12 10:53:15,887 log 222 Not Found: /users/delect/1/
+WARNING 2020-05-12 10:53:15,889 basehttp 157 "GET /users/delect/1/ HTTP/1.1" 404 2933
+INFO 2020-05-12 10:53:28,781 basehttp 157 "GET /users/list HTTP/1.1" 200 9029
+WARNING 2020-05-12 10:53:33,405 log 222 Not Found: /users/
+WARNING 2020-05-12 10:53:33,406 basehttp 157 "GET /users/ HTTP/1.1" 404 2906
+WARNING 2020-05-12 10:53:42,440 log 222 Not Found: /users/delete/
+WARNING 2020-05-12 10:53:42,442 basehttp 157 "GET /users/delete/ HTTP/1.1" 404 2927
+WARNING 2020-05-12 10:53:46,679 log 222 Method Not Allowed: /users/delete/1
+WARNING 2020-05-12 10:53:46,680 basehttp 157 "GET /users/delete/1 HTTP/1.1" 405 5654
+INFO 2020-05-12 10:54:23,233 basehttp 157 "POST /users/delete/3 HTTP/1.1" 200 32
+INFO 2020-05-12 10:54:27,841 basehttp 157 "POST /users/delete/4 HTTP/1.1" 200 37
+INFO 2020-05-12 10:54:34,950 basehttp 157 "POST /users/delete/5 HTTP/1.1" 200 37
+INFO 2020-05-12 10:54:40,806 basehttp 157 "GET /users/list HTTP/1.1" 200 8532
+INFO 2020-05-12 10:59:26,318 autoreload 222 D:\AutoTest\apps\user_app\views.py changed, reloading.
+INFO 2020-05-12 10:59:27,938 autoreload 598 Watching for file changes with StatReloader
+INFO 2020-05-12 10:59:43,024 basehttp 157 "GET /users/list HTTP/1.1" 200 8532
+INFO 2020-05-12 10:59:58,473 basehttp 157 "GET /users/list HTTP/1.1" 200 8532

@@ -1,0 +1,8 @@
+IP: zs-beta.cntracechain.com/#/login
+Browser: FireFox
+ReportAddress: C:\Users\Administrator\Desktop
+loop: '1'
+ImportAddress: "C:\\Users\\Administrator\\Desktop\\\u6D4B\u8BD5.xlsx"
+Moudle: "\u5168\u90E8"
+Version: '75'
+CaseNum: 1

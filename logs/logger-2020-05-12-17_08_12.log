@@ -1,0 +1,59 @@
+2020-05-12 17:08:50,002 - INFO - 清除"用例集合"工作表测试结果中，请稍等....
+2020-05-12 17:08:50,004 - INFO - 请先关闭用例文件，再运行测试用例
+2020-05-12 17:08:50,004 - INFO - 清除"登录"工作表测试结果中，请稍等...
+2020-05-12 17:08:50,040 - INFO - 请先关闭用例文件，再运行测试用例
+2020-05-12 17:08:50,040 - INFO - 清除"Sheet1"工作表测试结果中，请稍等...
+2020-05-12 17:08:50,041 - INFO - 请先关闭用例文件，再运行测试用例
+2020-05-12 17:08:50,233 - INFO - 选择的浏览器为:FireFox浏览器
+2020-05-12 17:08:57,050 - INFO - 启动火狐浏览器
+2020-05-12 17:08:57,051 - INFO - 进入http://zs-beta.cntracechain.com/#/login
+2020-05-12 17:08:59,905 - INFO - 输入框输入gaoyuan
+2020-05-12 17:08:59,979 - INFO - 通过css定位元素#login > section > main > div > div.el-col.el-col-10 > div > div > div.login1 > form > div > div:nth-child(2) > div > div > input
+2020-05-12 17:09:00,076 - INFO - 步骤"输入账号"执行成功
+2020-05-12 17:09:00,639 - INFO - 输入框输入zs123456
+2020-05-12 17:09:00,660 - INFO - 通过css定位元素#login > section > main > div > div.el-col.el-col-10 > div > div > div.login1 > form > div > div:nth-child(3) > div > div > input
+2020-05-12 17:09:00,777 - INFO - 步骤"输入密码"执行成功
+2020-05-12 17:09:01,428 - INFO - 点击元素：#login > section > main > div > div.el-col.el-col-10 > div > div > div.login1 > form > div > div:nth-child(5) > div > button
+2020-05-12 17:09:01,446 - INFO - 通过css定位元素#login > section > main > div > div.el-col.el-col-10 > div > div > div.login1 > form > div > div:nth-child(5) > div > button
+2020-05-12 17:09:01,792 - INFO - 步骤"点击登录"执行成功
+2020-05-12 17:09:02,385 - INFO - 休眠2秒
+2020-05-12 17:09:04,388 - INFO - 步骤"休眠"执行成功
+2020-05-12 17:09:04,764 - INFO - 点击元素：/html/body/div/div/section/section/div/div/main/div[2]/div[1]/div[2]/div[1]/span[1]
+2020-05-12 17:09:04,847 - INFO - 通过xpath定位元素/html/body/div/div/section/section/div/div/main/div[2]/div[1]/div[2]/div[1]/span[1]
+2020-05-12 17:09:05,415 - INFO - 步骤"点击商家资料"执行成功
+2020-05-12 17:09:06,060 - INFO - 休眠2秒
+2020-05-12 17:09:08,061 - INFO - 步骤"休眠"执行成功
+2020-05-12 17:09:08,646 - INFO - 点击元素：/html/body/div/div/section/section/div/div/main/div[2]/div[1]/button/span
+2020-05-12 17:09:08,725 - INFO - 通过xpath定位元素/html/body/div/div/section/section/div/div/main/div[2]/div[1]/button/span
+2020-05-12 17:09:09,575 - INFO - 步骤"点击编辑"执行成功
+2020-05-12 17:09:09,965 - INFO - 输入框输入编辑商家资料
+2020-05-12 17:09:09,989 - INFO - 通过xpath定位元素/html/body/div[1]/div/section/section/div/div/main/div[2]/div[2]/div[1]/div[2]/div/input
+2020-05-12 17:09:10,054 - INFO - 步骤"编辑商家资料"执行成功
+2020-05-12 17:09:10,464 - INFO - 输入框输入编辑商家地址
+2020-05-12 17:09:10,509 - INFO - 通过xpath定位元素/html/body/div[1]/div/section/section/div/div/main/div[2]/div[2]/div[4]/div[2]/div/input
+2020-05-12 17:09:10,593 - INFO - 步骤"编辑商家地址"执行成功
+2020-05-12 17:09:11,118 - INFO - 输入框输入编辑经营品种
+2020-05-12 17:09:11,144 - INFO - 通过xpath定位元素/html/body/div[1]/div/section/section/div/div/main/div[2]/div[2]/div[4]/div[4]/div/textarea
+2020-05-12 17:09:11,226 - INFO - 步骤"编辑经营品种"执行成功
+2020-05-12 17:09:11,808 - INFO - 输入框输入编辑法人代表
+2020-05-12 17:09:11,833 - INFO - 通过xpath定位元素/html/body/div[1]/div/section/section/div/div/main/div[2]/div[2]/div[5]/div[2]/div/input
+2020-05-12 17:09:11,935 - INFO - 步骤"编辑法人代表"执行成功
+2020-05-12 17:09:12,486 - INFO - 输入框输入13211111111
+2020-05-12 17:09:12,512 - INFO - 通过xpath定位元素/html/body/div/div/section/section/div/div/main/div[2]/div[2]/div[5]/div[4]/div/input
+2020-05-12 17:09:12,622 - INFO - 步骤"编辑电话号码"执行成功
+2020-05-12 17:09:13,074 - INFO - 输入框输入www.baidu.com
+2020-05-12 17:09:13,164 - INFO - 通过xpath定位元素/html/body/div/div/section/section/div/div/main/div[2]/div[2]/div[7]/div[2]/div/input
+2020-05-12 17:09:13,245 - INFO - 步骤"编辑销售网址"执行成功
+2020-05-12 17:09:13,703 - INFO - 输入框输入编辑商家介绍
+2020-05-12 17:09:13,745 - INFO - 通过xpath定位元素/html/body/div/div/section/section/div/div/main/div[2]/div[2]/div[8]/div[2]/div/textarea
+2020-05-12 17:09:13,821 - INFO - 步骤"编辑商家介绍"执行成功
+2020-05-12 17:09:14,255 - INFO - 点击元素：/html/body/div/div/section/section/div/div/main/div[2]/div[2]/div[14]/button[2]/span
+2020-05-12 17:09:14,340 - INFO - 通过xpath定位元素/html/body/div/div/section/section/div/div/main/div[2]/div[2]/div[14]/button[2]/span
+2020-05-12 17:09:14,487 - INFO - 步骤"取消"执行成功
+2020-05-12 17:09:14,762 - INFO - 休眠2秒
+2020-05-12 17:09:16,762 - INFO - 步骤"休眠"执行成功
+2020-05-12 17:09:17,175 - INFO - 关闭浏览器
+2020-05-12 17:09:20,846 - INFO - 正在写入测试结果，请勿关闭界面...
+2020-05-12 17:09:20,848 - INFO - 请先关闭用例文件，再运行测试用例
+2020-05-12 17:09:20,849 - INFO - [Errno 13] Permission denied: 'C:\\Users\\Administrator\\Desktop\\测试.xlsx'
+2020-05-12 17:09:20,849 - INFO - 关闭浏览器
