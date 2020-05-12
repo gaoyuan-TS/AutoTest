@@ -80,7 +80,11 @@ WSGI_APPLICATION = 'AutoTest.wsgi.application'
 # 配置数据库
 DATABASES = {
     'default': {
+<<<<<<< HEAD
         "init_command":"SET foreign_key_checks = 0;",
+=======
+        # "init_command":"SET foreign_key_checks = 0;",
+>>>>>>> 7547685d039e6a86df21c4fa3babd65931a186fd
         # python自带的一个数据库，基本不会被使用
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
