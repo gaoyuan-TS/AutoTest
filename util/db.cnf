@@ -1,0 +1,7 @@
+[client]
+database =test
+user =root
+password =gy123456
+host = 47.113.80.148
+port = 3306
+default-character-set = utf8
