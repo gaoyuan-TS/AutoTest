@@ -2,11 +2,11 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import generics
-
 from test_case.models import TestCase
 from test_case.serializers import TestCaseSerializerAll
 from user_app.serializers import *
 from user_app.models import UserInfo
+from test_case.testcase import *
 # Create your views here.
 
 """
@@ -36,7 +36,41 @@ class TestCaseAdd(APIView):
             return Response(testcase.errors)
 
 
+"""
+运行EXCEL测试用用例
+"""
 
+class TestRunner(APIView):
+    def get(self,request):
+        RunnerTestCase().RunnerBeautifulReport()
+        return Response({"message":"运行testcasec结束"})
+
+    def post(self,request):
+        ts_detail = TestCaseDetailSerializer(data=request.data)
+        if ts_detail.is_valid():
+            ts_detail.save()
+        data =request.data
+        ip = data.get('ip')
+        browser = data.get('browser')
+        Version = data.get('Version')
+        loop = data.get('loop')
+        report_address = data.get('report_address')
+        importAddress = data.get('importAddress')
+        moudle = data.get('moudle')
+
+        file = CONFIG_PATH+'Parameter.yaml'
+        YamlWrite().Write_Yaml_Updata(file, 'IP', ip)
+        YamlWrite().Write_Yaml_Updata(file, 'Browser', browser)
+        YamlWrite().Write_Yaml_Updata(file, 'ReportAddress', report_address)
+        YamlWrite().Write_Yaml_Updata(file, 'loop', loop)
+        YamlWrite().Write_Yaml_Updata(file, 'ImportAddress', importAddress)
+        YamlWrite().Write_Yaml_Updata(file, 'Moudle', moudle)
+        YamlWrite().Write_Yaml_Updata(file, 'Version', Version)
+        YamlWrite().Write_Yaml_Updata(file, 'CaseNum', 1)
+
+
+        RunnerTestCase().RunnerBeautifulReport()
+        return Response({'code': 200, 'msg': '测试用例运行结束', 'data':ts_detail.data})
 
 
 class TestDetailById(generics.RetrieveAPIView):

@@ -1,15 +1,12 @@
-from django.test import TestCase
-
-# Create your tests here.
 #!/usr/bin/env python
 # encoding: utf-8
 """
 @author :gaoyuan
 @contact:1103313679@qq.com
-@time   :2020/5/12 16:28
+@time   :2020/5/13 11:41
 """
-
-
+#!/usr/bin/env python
+# encoding: utf-8
 
 from utils.ParseExcel import ParseExcel
 from ConfigRead import *
@@ -29,8 +26,7 @@ import unittest
 logger = Logger('logger').getlog()
 
 
-class TunnerTestCase(unittest.TestCase):
-
+class RunnerTestCase(unittest.TestCase):
     def setUp(self):
         self.parseyaml = ParseYaml()
         self.testdata_path = self.parseyaml.ReadParameter('ImportAddress')
@@ -48,7 +44,7 @@ class TunnerTestCase(unittest.TestCase):
         self.caseTime_dic = {}
         self.font = Font(color=None)
 
-    def test_Case(self):
+    def testCase(self):
         try:
             self.setUp()
             # 获取循环次数
@@ -533,34 +529,35 @@ class TunnerTestCase(unittest.TestCase):
             # 异常结束时，关闭文件流
             self.parseexcel.wb.close()
 
-    def RunReport(self):
-        report_path = ParseYaml().ReadParameter('ReportAddress') # 报告存放位置
-        timestr = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
-        filename = report_path+'\\'+timestr+'.html'
-        fp = open(filename, 'wb')
-        # suites = unittest.defaultTestLoader.discover(TESTCASE_PATH, pattern='test*.py', top_level_dir=TESTCASE_PATH)
-        suites = unittest.TestSuite()
-        suites.addTest(TunnerTestCase('test_Case'))
-        runner = HTMLTestRunner(
-            title='自动化测试报告',
-            description='',
-            stream=fp,
-            verbosity=2,
-        )
-        runner.run(suites)
-        fp.close()
+    # def RunReport(self):
+    #     report_path = ParseYaml().ReadParameter('ReportAddress') # 报告存放位置
+    #     timestr = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+    #     filename = report_path+'\\'+timestr+'.html'
+    #     fp = open(filename, 'wb')
+    #     # suites = unittest.defaultTestLoader.discover(TESTCASE_PATH, pattern='test*.py', top_level_dir=TESTCASE_PATH)
+    #     suites = unittest.TestSuite()
+    #     suites.addTest(RunnerTestCase('test_Case'))
+    #     runner = HTMLTestRunner(
+    #         title='自动化测试报告',
+    #         description='',
+    #         stream=fp,
+    #         verbosity=2,
+    #     )
+    #     runner.run(suites)
+    #     fp.close()
 
     def RunnerBeautifulReport(self):
-        suite = unittest.TestLoader().loadTestsFromTestCase(TunnerTestCase)
+        suite = unittest.TestLoader().loadTestsFromTestCase(RunnerTestCase)
         runner = bf(suite)
         report_path = REPORT_PATH# 报告存放位置
         timestr = time.strftime('%Y%m%d%H%M', time.localtime(time.time()))
         filename = report_path+'\\'+timestr+'.html'
         runner.report(filename = '\\'+'测试报告'+timestr+'.html', description=u"测试报告",report_dir=report_path,theme="theme_cyan")
+        print('runner.report'+timestr)
 
 
 
 
 
-if __name__ == '__main__':
-    TunnerTestCase().RunnerBeautifulReport()
+# if __name__ == '__main__':
+#     TunnerTestCase().RunnerBeautifulReport()

@@ -49,6 +49,7 @@ class YamlWrite(object):
             f.close()
 
 
-if __name__ == '__main__':
-    p = CONFIG_PATH+'Parameter.yaml'
-    YamlWrite().Write_Yaml_Updata(p, 'Version', '76')
+# if __name__ == '__main__':
+#     p = CONFIG_PATH+'Parameter.yaml'
+#     IPvalue = 'C:\\Users\\Administrator\\Desktop\\测试.xlsx'
+#     YamlWrite().Write_Yaml_Updata(p, 'ImportAddress', IPvalue)

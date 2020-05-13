@@ -23,3 +23,11 @@ class TestCaseSerializerOther(serializers.ModelSerializer):
         model = TestCase
         extra_kwargs = {'id': {'required': False}}
         # depth=1
+
+
+class TestCaseDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = '__all__'
+        model = TestCaseRunnerDetail
+        extra_kwargs = {'id': {'required': False}}
+        # depth=1

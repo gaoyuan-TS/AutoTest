@@ -18,6 +18,7 @@ from utils.WriterFile import YamlWrite
 from testcase.HTMLTestRunner_cn import HTMLTestRunner
 from datetime import datetime
 from openpyxl.styles import Font
+from BeautifulReport import BeautifulReport as bf, BeautifulReport
 import traceback
 import time
 import re
@@ -25,7 +26,7 @@ import unittest
 logger = Logger('logger').getlog()
 
 
-class TestPaperless(unittest.TestCase):
+class RunnerTestCase(unittest.TestCase):
 
     def setUp(self):
         self.parseyaml = ParseYaml()
@@ -536,7 +537,7 @@ class TestPaperless(unittest.TestCase):
         fp = open(filename, 'wb')
         # suites = unittest.defaultTestLoader.discover(TESTCASE_PATH, pattern='test*.py', top_level_dir=TESTCASE_PATH)
         suites = unittest.TestSuite()
-        suites.addTest(TestPaperless('test_Case'))
+        suites.addTest(RunnerTestCase('test_Case'))
         runner = HTMLTestRunner(
             title='自动化测试报告',
             description='',
@@ -546,10 +547,17 @@ class TestPaperless(unittest.TestCase):
         runner.run(suites)
         fp.close()
 
-if __name__ == '__main__':
-    print('aaaa')
-    TestPaperless().test_Case()
-    TestPaperless().RunReport()
+    def RunnerBeautifulReport(self):
+        suite = unittest.TestLoader().loadTestsFromTestCase(RunnerTestCase)
+        runner = bf(suite)
+        report_path = REPORT_PATH# 报告存放位置
+        timestr = time.strftime('%Y%m%d%H%M', time.localtime(time.time()))
+        filename = report_path+'\\'+timestr+'.html'
+        runner.report(filename = '\\'+'测试报告'+timestr+'.html', description=u"测试报告",report_dir=report_path,theme="theme_cyan")
 
-    print('bbb')
-    print('ccc')
+
+
+
+
+# if __name__ == '__main__':
+#     RunnerTestCase().RunnerBeautifulReport()

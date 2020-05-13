@@ -36,5 +36,5 @@ class ParseYaml(object):
 
 if __name__ == '__main__':
     print(ParseYaml().ReadGuiSelectValue('BrowserType').get('Chrome'))
-    print(ParseYaml().ReadParameter('IP'))
+    print(ParseYaml().ReadParameter('ReportAddress'))
     print(type(ParseYaml().ReadTimeWait('casetime')))
