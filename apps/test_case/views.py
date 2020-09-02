@@ -54,11 +54,12 @@ class TestRunner(APIView):
         browser = data.get('browser')
         Version = data.get('Version')
         loop = data.get('loop')
-        report_address = data.get('report_address')
-        importAddress = data.get('importAddress')
+        #report_address = data.get('report_address')
+        #importAddress = data.get('importAddress')
         moudle = data.get('moudle')
-
+        report_address = REPORT_PATH
         file = CONFIG_PATH+'Parameter.yaml'
+        importAddress = EXCELTEMPLATE_PATH+'测试.xlsx'
         YamlWrite().Write_Yaml_Updata(file, 'IP', ip)
         YamlWrite().Write_Yaml_Updata(file, 'Browser', browser)
         YamlWrite().Write_Yaml_Updata(file, 'ReportAddress', report_address)

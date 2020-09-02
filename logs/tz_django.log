@@ -3125,3 +3125,80 @@ INFO 2020-05-13 18:08:31,756 autoreload 222 D:\AutoTest\apps\test_case\views.py 
 INFO 2020-05-13 18:08:33,337 autoreload 598 Watching for file changes with StatReloader
 INFO 2020-05-13 18:11:45,643 autoreload 598 Watching for file changes with StatReloader
 INFO 2020-05-13 18:13:06,246 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 340
+INFO 2020-09-01 09:41:14,143 autoreload 598 Watching for file changes with StatReloader
+INFO 2020-09-01 10:00:13,660 autoreload 598 Watching for file changes with StatReloader
+WARNING 2020-09-01 10:00:21,219 log 222 Not Found: /
+WARNING 2020-09-01 10:00:21,221 basehttp 157 "GET / HTTP/1.1" 404 2140
+WARNING 2020-09-01 10:00:21,316 log 222 Not Found: /favicon.ico
+WARNING 2020-09-01 10:00:21,318 basehttp 157 "GET /favicon.ico HTTP/1.1" 404 2191
+WARNING 2020-09-01 10:00:32,802 log 222 Not Found: /testcase
+WARNING 2020-09-01 10:00:32,803 basehttp 157 "GET /testcase HTTP/1.1" 404 2182
+WARNING 2020-09-01 10:00:39,096 log 222 Not Found: /testcase/
+WARNING 2020-09-01 10:00:39,097 basehttp 157 "GET /testcase/ HTTP/1.1" 404 2734
+INFO 2020-09-01 10:00:49,693 basehttp 157 "GET /testcase/list HTTP/1.1" 200 15146
+INFO 2020-09-01 10:00:49,714 basehttp 157 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2020-09-01 10:00:49,726 basehttp 157 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2020-09-01 10:00:49,728 basehttp 157 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+INFO 2020-09-01 10:00:49,729 basehttp 157 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2020-09-01 10:00:49,730 basehttp 157 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2020-09-01 10:00:49,732 basehttp 157 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2020-09-01 10:00:49,735 basehttp 157 "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+INFO 2020-09-01 10:00:49,740 basehttp 157 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2020-09-01 10:00:49,741 basehttp 157 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2020-09-01 10:00:49,742 basehttp 157 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2020-09-01 10:00:49,771 basehttp 157 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2020-09-01 10:01:11,473 log 222 Not Found: /testcase/runner/
+WARNING 2020-09-01 10:01:11,519 basehttp 157 "GET /testcase/runner/ HTTP/1.1" 404 2755
+WARNING 2020-09-01 10:01:29,880 log 222 Method Not Allowed: /testcase/insert
+WARNING 2020-09-01 10:01:29,919 basehttp 157 "GET /testcase/insert HTTP/1.1" 405 5638
+INFO 2020-09-01 10:01:49,536 basehttp 157 "GET /testcase/runner HTTP/1.1" 200 6925
+INFO 2020-09-01 10:08:30,980 autoreload 598 Watching for file changes with StatReloader
+INFO 2020-09-01 10:12:07,772 basehttp 157 "GET /testcase/runner HTTP/1.1" 200 6925
+INFO 2020-09-01 11:04:47,866 autoreload 598 Watching for file changes with StatReloader
+WARNING 2020-09-01 11:05:53,337 log 222 Not Found: /
+WARNING 2020-09-01 11:05:53,417 basehttp 157 "GET / HTTP/1.1" 404 2140
+INFO 2020-09-01 11:14:28,447 autoreload 598 Watching for file changes with StatReloader
+WARNING 2020-09-01 11:17:46,708 log 222 Not Found: /testcase/
+WARNING 2020-09-01 11:17:46,745 basehttp 157 "GET /testcase/ HTTP/1.1" 404 2734
+INFO 2020-09-01 11:19:45,382 basehttp 157 "GET /testcase/list HTTP/1.1" 200 15146
+INFO 2020-09-01 11:20:16,090 basehttp 157 "GET /testcase/runner HTTP/1.1" 200 6925
+INFO 2020-09-01 11:34:06,921 basehttp 157 "GET /testcase/runner HTTP/1.1" 200 6925
+INFO 2020-09-01 11:50:02,790 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 55
+INFO 2020-09-01 11:50:13,980 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 55
+INFO 2020-09-01 11:50:18,093 basehttp 157 "GET /testcase/runner HTTP/1.1" 200 35
+INFO 2020-09-01 11:50:43,296 basehttp 157 "GET /testcase/runner HTTP/1.1" 200 35
+INFO 2020-09-01 11:51:41,710 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 55
+INFO 2020-09-01 11:53:11,555 basehttp 157 "GET /testcase/runner HTTP/1.1" 200 6925
+INFO 2020-09-01 11:53:18,096 basehttp 157 "GET /testcase/runner HTTP/1.1" 200 6925
+INFO 2020-09-01 11:53:28,082 basehttp 157 "GET /testcase/runner HTTP/1.1" 200 6925
+INFO 2020-09-01 11:53:46,513 autoreload 598 Watching for file changes with StatReloader
+INFO 2020-09-01 11:53:51,602 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 55
+INFO 2020-09-01 11:54:02,312 basehttp 157 "GET /testcase/runner HTTP/1.1" 200 6925
+INFO 2020-09-01 11:55:23,514 autoreload 598 Watching for file changes with StatReloader
+INFO 2020-09-01 11:55:34,063 basehttp 157 "GET /testcase/runner HTTP/1.1" 200 6925
+INFO 2020-09-01 12:01:16,356 autoreload 598 Watching for file changes with StatReloader
+INFO 2020-09-01 12:01:21,597 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 55
+INFO 2020-09-01 12:01:35,083 basehttp 157 "GET /testcase/runner HTTP/1.1" 200 35
+INFO 2020-09-01 14:53:14,867 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 340
+INFO 2020-09-01 14:58:32,054 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 340
+INFO 2020-09-01 15:07:29,390 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 340
+INFO 2020-09-01 15:12:19,052 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 256
+INFO 2020-09-01 15:16:33,068 autoreload 222 D:\AutoTest\apps\test_case\testcase.py changed, reloading.
+INFO 2020-09-01 15:16:34,678 autoreload 598 Watching for file changes with StatReloader
+INFO 2020-09-01 15:28:57,347 autoreload 222 D:\AutoTest\apps\test_case\views.py changed, reloading.
+INFO 2020-09-01 15:28:58,799 autoreload 598 Watching for file changes with StatReloader
+INFO 2020-09-01 15:31:10,290 autoreload 222 D:\AutoTest\apps\test_case\views.py changed, reloading.
+INFO 2020-09-01 15:31:13,240 autoreload 598 Watching for file changes with StatReloader
+INFO 2020-09-01 15:36:36,977 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 210
+INFO 2020-09-02 09:42:06,004 autoreload 598 Watching for file changes with StatReloader
+INFO 2020-09-02 09:43:57,351 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 210
+INFO 2020-09-02 10:04:03,655 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 210
+INFO 2020-09-02 10:09:56,165 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 210
+INFO 2020-09-02 10:13:29,820 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 210
+INFO 2020-09-02 10:14:00,491 autoreload 598 Watching for file changes with StatReloader
+INFO 2020-09-02 10:16:48,133 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 210
+INFO 2020-09-02 10:21:09,393 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 210
+INFO 2020-09-02 10:40:14,999 autoreload 222 D:\AutoTest\action\PageAction.py changed, reloading.
+INFO 2020-09-02 10:40:16,859 autoreload 598 Watching for file changes with StatReloader
+INFO 2020-09-02 10:41:21,500 autoreload 598 Watching for file changes with StatReloader
+INFO 2020-09-02 10:43:37,342 basehttp 157 "POST /testcase/runner HTTP/1.1" 200 210

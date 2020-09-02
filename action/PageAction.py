@@ -250,6 +250,20 @@ class PageAction(object):
         #     print('输入框输入值错误')
         #     print(e)
 
+    def clearAndInput(self, by, locator, value):
+        '''
+        清除输入框再输入值
+        :return:
+        '''
+        logger.info('清空输入框')
+        print('清空输入框')
+        ObjectMap(self.driver).getElement(by, locator).clear()
+        logger.info('输入框输入%s' % value)
+        print('输入框输入%s' % value)
+        ObjectMap(self.driver).getElement(by, locator).send_keys(value)
+
+
+
     def uploadFile(self, by, locator, value):
         '''
         上传单个文件

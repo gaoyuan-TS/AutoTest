@@ -1,0 +1,5 @@
+logs
+report
+__pycache
+.idea/*
+.git

@@ -506,7 +506,7 @@ class RunnerTestCase(unittest.TestCase):
                             faild_case.append(pi)
                         else:
                             continue
-                    # 写入excel表中的通过用力数单元格中
+                    # 写入excel表中的通过用例数单元格中
                     self.parseexcel.writeCellValue(self.sheetnames[0], 1, 5, len(pass_case))
                     # 写入excel表中的失败用例数单元格中
                     self.parseexcel.writeCellValue(self.sheetnames[0], 1, 7, len(faild_case))
