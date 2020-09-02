@@ -3,3 +3,5 @@ report
 __pycache
 .idea/*
 .git
+venv
+geckodriver.log
