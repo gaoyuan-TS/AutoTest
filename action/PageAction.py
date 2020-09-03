@@ -506,13 +506,14 @@ class PageAction(object):
         屏幕截图
         :return:
         """
-        picturename = 'D:\\自动化测试截图\\'+file+'\\'+casename
+        picturename =SCREENSHOTS_PATH +file+'\\'+casename
         if not os.path.exists(picturename):
             os.makedirs(picturename)
-            picturename = picturename+'\\'+DirAndTime.getCurrentTime()+'.png'
+            picturename = picturename + '\\' + DirAndTime.getCurrentTime() + '.png'
         else:
             picturename = picturename + '\\' + DirAndTime.getCurrentTime() + '.png'
         try:
+            
             self.driver.get_screenshot_as_file(picturename)
         except Exception as e:
             print(e)

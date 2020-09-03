@@ -160,6 +160,7 @@ class RunnerTestCase(unittest.TestCase):
                                             # self.parseexcel.writeCellValues(sheetname, t + 2, '关键字对应参数错误')
                                             logger.info('关键字对应参数错误')
                                             print('关键字对应参数错误')
+
                                             continue
                                         # 执行用例
                                         try:
@@ -177,6 +178,7 @@ class RunnerTestCase(unittest.TestCase):
                                             logger.info('关键字参数个数错误，请检查参数')
                                             print('步骤"{}"执行失败'.format(pre_stepname))
                                             print('关键字参数个数错误，请检查参数')
+
                                         except TimeoutException:
                                             # 将结果以及错误信息存入字典
                                             self.result_dic.setdefault(sheetname, {})[t+2] = 'Skip'
@@ -190,6 +192,7 @@ class RunnerTestCase(unittest.TestCase):
                                             logger.info('元素定位超时，请检查上一步是否执行成功，或元素定位方式')
                                             print('步骤"{}"执行失败'.format(pre_stepname))
                                             print('元素定位超时，请检查上一步是否执行成功，或元素定位方式')
+
                                         except TimeoutError as e:
                                             # 将结果以及错误信息存入字典
                                             self.result_dic.setdefault(sheetname, {})[t + 2] = 'Failed'
@@ -197,18 +200,22 @@ class RunnerTestCase(unittest.TestCase):
                                             logger.info('步骤"{}"执行失败'.format(pre_stepname))
                                             print('步骤"{}"执行失败'.format(pre_stepname))
                                             logger.info(e)
+
                                         except AttributeError as e:
                                             # 将结果以及错误信息存入字典
                                             self.result_dic.setdefault(sheetname, {})[t + 2] = 'Skip'
                                             self.error_dic.setdefault(sheetname, {})[t + 2] = '元素定位超时，请检查元素定位'
+
                                             logger.info('步骤"{}"执行失败'.format(pre_stepname))
                                             print('步骤"{}"执行失败'.format(pre_stepname))
                                             logger.info(e)
+
                                         except AssertionError:
                                             # 将结果以及错误信息存入字典
                                             self.result_dic.setdefault(sheetname, {})[t+2] = 'Failed'
                                             self.error_dic.setdefault(sheetname, {})[t+2] = '断言失败'
                                             # 写入测试时间，测试结果，错误信息，错误截图
+
                                             # self.parseexcel.writeCellValue(sheetname, t+2, testStep_Result+l, 'Failed')
                                             # self.parseexcel.writeCellValues(sheetname, t + 2, '断言失败')
                                             logger.info('步骤"{}"执行失败'.format(pre_stepname))
@@ -219,6 +226,7 @@ class RunnerTestCase(unittest.TestCase):
                                             self.error_dic.setdefault(sheetname, {})[t+2] = '浏览器异常，' \
                                                                                             '请检查浏览器驱动或运行过程中是否被强制关闭'
                                             # 写入测试时间，测试结果，错误信息，错误截图
+
                                             # self.parseexcel.writeCellValue(sheetname, t+2, testStep_Result+l, 'Skip')
                                             # self.parseexcel.writeCellValues(sheetname, t + 2, '浏览器异常，'
                                             #                                                             '请检查浏览器驱动或运行过程中是否被强制关闭')
@@ -231,6 +239,7 @@ class RunnerTestCase(unittest.TestCase):
                                             # 将结果以及错误信息存入字典
                                             self.result_dic.setdefault(sheetname, {})[t+2] = 'Skip'
                                             self.error_dic.setdefault(sheetname, {})[t+2] = error_info
+
                                             # # 写入测试时间，测试结果，错误信息，错误截图
                                             # self.parseexcel.writeCellValue(sheetname, t+2, testStep_Result+l, 'Skip')
                                             # self.parseexcel.writeCellValues(sheetname, t + 2, error_info)
@@ -245,11 +254,14 @@ class RunnerTestCase(unittest.TestCase):
                                             print('步骤"{}"执行成功'.format(pre_stepname))
                                         finally:
                                             # 截图
-                                            pic = self.pageaction.saveScreeShot(sheetname, testcasenum)
+                                            if self.result_dic.setdefault(sheetname, {})[t+2] == 'Skip' or self.result_dic.setdefault(sheetname, {})[t+2] == 'Failed':
+
+                                                pic = self.pageaction.saveScreeShot(sheetname, testcasenum)
+                                                self.picture_dic.setdefault(sheetname, {})[t+2] = pic
                                             # 将截图信息以及测试时间存入字典中
                                             Time = datetime.now()
                                             Time.strftime('%Y:%m:%d %H:%M:%S')
-                                            self.picture_dic.setdefault(sheetname, {})[t+2] = pic
+
                                             self.time_dic.setdefault(sheetname, {})[t + 2] = Time
                                             # self.parseexcel.writeCellValue(sheetname, t + 2, testStep_Picture, pic)
                                             # self.parseexcel.writeCellTime(sheetname, t + 2, testStep_EndTime)
@@ -311,6 +323,7 @@ class RunnerTestCase(unittest.TestCase):
                                             # self.parseexcel.writeCellValues(sheetname, t + 2, '关键字对应参数错误')
                                             logger.info('关键字对应参数错误')
                                             print('关键字对应参数错误')
+
                                             continue
                                         # 执行用例
                                         try:
@@ -329,6 +342,7 @@ class RunnerTestCase(unittest.TestCase):
                                             print('步骤"{}"执行失败'.format(stepname))
                                             print('关键字参数个数错误，请检查参数')
                                             logger.info(e)
+
                                         except TimeoutException as e:
                                             # 将结果以及错误信息存入字典
                                             self.result_dic.setdefault(sheetname, {})[t + 2] = 'Skip'
@@ -343,6 +357,7 @@ class RunnerTestCase(unittest.TestCase):
                                             print('步骤"{}"执行失败'.format(stepname))
                                             print('元素定位超时，请检查上一步是否执行成功，或元素定位方式')
                                             logger.info(e)
+
                                         except TimeoutError as e:
                                             # 将结果以及错误信息存入字典
                                             self.result_dic.setdefault(sheetname, {})[t + 2] = 'Failed'
@@ -350,6 +365,7 @@ class RunnerTestCase(unittest.TestCase):
                                             logger.info('步骤"{}"执行失败'.format(stepname))
                                             print('步骤"{}"执行失败'.format(stepname))
                                             logger.info(e)
+
                                         except AttributeError as e:
                                             # 将结果以及错误信息存入字典
                                             self.result_dic.setdefault(sheetname, {})[t + 2] = 'Skip'
@@ -357,6 +373,7 @@ class RunnerTestCase(unittest.TestCase):
                                             logger.info('步骤"{}"执行失败'.format(stepname))
                                             print('步骤"{}"执行失败'.format(stepname))
                                             logger.info(e)
+
                                         except AssertionError as e:
                                             # 将结果以及错误信息存入字典
                                             self.result_dic.setdefault(sheetname, {})[t + 2] = 'Failed'
@@ -367,6 +384,7 @@ class RunnerTestCase(unittest.TestCase):
                                             logger.info('步骤"{}"执行失败'.format(stepname))
                                             print('步骤"{}"执行失败'.format(stepname))
                                             logger.info(e)
+
                                         except WebDriverException as e:
                                             # 将结果以及错误信息存入字典
                                             self.result_dic.setdefault(sheetname, {})[t + 2] = 'Skip'
@@ -381,6 +399,7 @@ class RunnerTestCase(unittest.TestCase):
                                             print('步骤"{}"执行失败'.format(stepname))
                                             print('浏览器异常，请检查浏览器驱动或运行过程中是否被强制关闭')
                                             logger.info(e)
+
                                         except Exception:
                                             error_info = traceback.format_exc()
                                             # 将结果以及错误信息存入字典
@@ -391,6 +410,7 @@ class RunnerTestCase(unittest.TestCase):
                                             # self.parseexcel.writeCellValues(sheetname, t + 2, error_info)
                                             logger.info('步骤"{}"执行失败'.format(stepname))
                                             print('步骤"{}"执行失败'.format(stepname))
+
                                         else:
                                             # 写入测试结果
                                             # 将结果以及错误信息存入字典
@@ -400,11 +420,12 @@ class RunnerTestCase(unittest.TestCase):
                                             print('步骤"{}"执行成功'.format(stepname))
                                         finally:
                                             # 截图
-                                            pic = self.pageaction.saveScreeShot(sheetname, testcasenum)
-                                            # 将截图信息以及测试时间存入字典中
+                                            if self.result_dic.setdefault(sheetname, {})[t+2] == 'Skip' or self.result_dic.setdefault(sheetname, {})[t+2] == 'Failed':
+                                                pic = self.pageaction.saveScreeShot(sheetname, testcasenum)
+                                                self.picture_dic.setdefault(sheetname, {})[t+2] = pic
+                                             # 将截图信息以及测试时间存入字典中
                                             Time = datetime.now()
                                             Time.strftime('%Y:%m:%d %H:%M:%S')
-                                            self.picture_dic.setdefault(sheetname, {})[t + 2] = pic
                                             self.time_dic.setdefault(sheetname, {})[t + 2] = Time
                                             # self.parseexcel.writeCellValue(sheetname, t + 2, testStep_Picture, pic)
                                             # self.parseexcel.writeCellTime(sheetname, t + 2, testStep_EndTime)
