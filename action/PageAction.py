@@ -136,9 +136,15 @@ class PageAction(object):
             WaitUnit(self.driver)
 
     def quitBrowser(self):
-        logger.info('关闭浏览器')
-        print('关闭浏览器')
+        logger.info('退出浏览器')
+        print('退出浏览器')
         self.driver.quit()
+
+
+    def closeBrowser(self):
+        logger.info('关闭当前页面')
+        print('关闭当前页面')
+        self.driver.close()
 
     def back(self):
         '''
@@ -615,19 +621,27 @@ class PageAction(object):
         #     logger.exception("未找到元素")
         #     print("未找到元素")
 
+    def scrollTop(self):
+        js = "var q=document.documentElement.scrollTop=10000"
+        self.driver.execute_script(js)
+        time.sleep(3)
+        js = "var q=document.documentElement.scrollTop=0"
+        self.driver.execute_script(js)
+
+
 if __name__ == '__main__':
-    p = PageAction()
-    p.openBrowser()
-    o = ObjectMap(p.driver)
+    # p = PageAction()
+    # p.openBrowser()
+    # o = ObjectMap(p.driver)
     # p.saveScreeShot('登录', '侧四')
     # p.getUrl('http://172.16.45.5')
-    str = 'p.getUrl("http://www.baidu.com")'
-    eval(str)
-    p.click('class', 'soutu-btn')
-    p.inputValue('class', 'upload-pic', r'D:\Automation2.0-master\Automation2.0-master\注意事项.txt')
-    p.not_wait_find_element('css', '.soutu-state-waiting.soutu-waiting')
-    print(o.getElement('class', 'soutu-error-main').text)
-    p.assertEqule('class', 'soutu-error-main', '抱歉，您上传的文件不是图片格式，请重新上传')
+    # str = 'p.getUrl("http://www.baidu.com")'
+    # eval(str)
+    # p.click('class', 'soutu-btn')
+    # p.inputValue('class', 'upload-pic', r'D:\测试素材\商家资料\logo2.jpg')
+    # p.not_wait_find_element('css', '.soutu-state-waiting.soutu-waiting')
+    # print(o.getElement('class', 'soutu-error-main').text)
+    # p.assertEqule('class', 'soutu-error-main', '抱歉，您上传的文件不是图片格式，请重新上传')
     # p.click('css', '.linkColor')
     # p.inputValue('name', 'register', 'CCtd-rZOk-adWi-f3zK-R3O6-mF+X-tg5h-A4dd')
     # p.click('id','registBtn')
@@ -635,3 +649,37 @@ if __name__ == '__main__':
     # # p.assertLen('css', '.formTil', '4')
     # # p.inputValue('name', 'account', '123')
     # p.assertEqule('css', '.errorTip', '注册码异常 Error Code : 102')
+    try:
+
+        p = PageAction()
+        p.openBrowser()
+        o = ObjectMap(p.driver)
+        p.getUrl("http://zs-beta.cntracechain.com/#/login")
+        p.driver.maximize_window()
+
+        p.inputValue('xpath', '/html/body/div/div/section/main/div/div[2]/div/div/div[3]/form/div/div[2]/div/div/input','gaoyuan')
+        p.inputValue('xpath', '/html/body/div/div/section/main/div/div[2]/div/div/div[3]/form/div/div[3]/div/div/input','zs666666')
+        p.click('xpath','/html/body/div/div/section/main/div/div[2]/div/div/div[3]/form/div/div[5]/div/button')
+        p.driver.get_screenshot_as_file(u"D:\AutoTest\screenshots\登录\test_login_1\test.png")
+        p.sleep(2)
+        p.click('xpath','/html/body/div/div/section/section/main/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div/span')
+        p.click('xpath','/html/body/div/div/section/section/main/div[2]/div[1]/button')
+        p.sleep(5)
+        print('开始script-----------')
+        p.scrollTop()
+        time.sleep(3)
+        print('结束script-----------')
+        p.sleep(2)
+        p.inputValue('xpath','/html/body/div/div/section/section/main/div[2]/div/div[2]/div[2]/div[1]/div[2]/div/div','D:\测试素材\商家资料\logo1.jpg')
+        p.sleep(2)
+
+
+        p.sleep(5)
+    except Exception as e:
+        print(e)
+    finally:
+        p.quitBrowser()
+
+    # p.not_wait_find_element('css', '.soutu-state-waiting.soutu-waiting')
+    # print(o.getElement('class', 'soutu-error-main').text)
+    # p.assertEqule('class', 'soutu-error-main', '抱歉，您上传的文件不是图片格式，请重新上传')
