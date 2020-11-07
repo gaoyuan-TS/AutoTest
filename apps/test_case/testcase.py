@@ -19,6 +19,7 @@ from testcase.HTMLTestRunner_cn import HTMLTestRunner
 from datetime import datetime
 from openpyxl.styles import Font
 from BeautifulReport import BeautifulReport as bf, BeautifulReport
+from utils.DirAndTime import DirAndTime
 import traceback
 import time
 import re
@@ -28,6 +29,7 @@ logger = Logger('logger').getlog()
 
 class RunnerTestCase(unittest.TestCase):
     def setUp(self):
+        print('执行setup'+ DirAndTime.getCurrentTime())
         self.parseyaml = ParseYaml()
         self.testdata_path = self.parseyaml.ReadParameter('ImportAddress')
         self.parseexcel = ParseExcel(self.testdata_path)
@@ -43,8 +45,10 @@ class RunnerTestCase(unittest.TestCase):
         self.caseResult_dic = {}
         self.caseTime_dic = {}
         self.font = Font(color=None)
+        print('结束setup '+ DirAndTime.getCurrentTime())
 
-    def testCase(self):
+    def test_Case(self):
+        print('执行test_Case'+ DirAndTime.getCurrentTime())
         try:
             self.setUp()
             # 获取循环次数
@@ -545,30 +549,33 @@ class RunnerTestCase(unittest.TestCase):
                     self.parseexcel.wb.save(self.testdata_path)
                     logger.info('用例测试结束')
                     print('用例测试结束')
+                    print('结束：testCase() '+ DirAndTime.getCurrentTime())
         except Exception as e:
             print(e)
             # 异常结束时，关闭文件流
             self.parseexcel.wb.close()
 
-    # def RunReport(self):
-    #     report_path = ParseYaml().ReadParameter('ReportAddress') # 报告存放位置
-    #     timestr = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
-    #     filename = report_path+'\\'+timestr+'.html'
-    #     fp = open(filename, 'wb')
-    #     # suites = unittest.defaultTestLoader.discover(TESTCASE_PATH, pattern='test*.py', top_level_dir=TESTCASE_PATH)
-    #     suites = unittest.TestSuite()
-    #     suites.addTest(RunnerTestCase('test_Case'))
-    #     runner = HTMLTestRunner(
-    #         title='自动化测试报告',
-    #         description='',
-    #         stream=fp,
-    #         verbosity=2,
-    #     )
-    #     runner.run(suites)
-    #     fp.close()
+    def RunReport(self):
+        report_path = REPORT_PATH # 报告存放位置
+        timestr = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+        filename = report_path + '\\'+ '测试报告' + timestr+'.html'
+        fp = open(filename, 'wb')
+        # suites = unittest.defaultTestLoader.discover(TESTCASE_PATH, pattern='test*.py', top_level_dir=TESTCASE_PATH)
+        suites = unittest.TestSuite()
+        suites.addTest(RunnerTestCase('test_Case'))
+        runner = HTMLTestRunner(
+            title='自动化测试报告',
+            description='',
+            stream=fp,
+            verbosity=2,
+        )
+        runner.run(suites)
+        fp.close()
 
     def RunnerBeautifulReport(self):
-        suite = unittest.TestLoader().loadTestsFromTestCase(RunnerTestCase)
+        suite = unittest.TestSuite()
+        suite.addTest(RunnerTestCase('test_Case'))
+        # suite = unittest.TestLoader().loadTestsFromTestCase(RunnerTestCase)
         runner = bf(suite)
         report_path = REPORT_PATH# 报告存放位置
         timestr = time.strftime('%Y%m%d%H%M', time.localtime(time.time()))

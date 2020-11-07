@@ -7,6 +7,7 @@ from test_case.serializers import TestCaseSerializerAll
 from user_app.serializers import *
 from user_app.models import UserInfo
 from test_case.testcase import *
+from utils.DirAndTime import DirAndTime
 # Create your views here.
 
 """
@@ -41,9 +42,9 @@ class TestCaseAdd(APIView):
 """
 
 class TestRunner(APIView):
-    def get(self,request):
-        RunnerTestCase().RunnerBeautifulReport()
-        return Response({"message":"运行testcasec结束"})
+    # def get(self,request):
+    #     RunnerTestCase().RunnerBeautifulReport()
+    #     return Response({"message":"运行testcasec结束"})
 
     def post(self,request):
         ts_detail = TestCaseDetailSerializer(data=request.data)
@@ -59,7 +60,7 @@ class TestRunner(APIView):
         moudle = data.get('moudle')
         report_address = REPORT_PATH
         file = CONFIG_PATH+'Parameter.yaml'
-        importAddress = EXCELTEMPLATE_PATH+'测试.xlsx'
+        importAddress = EXCELTEMPLATE_PATH+'测试用例.xlsx'
         YamlWrite().Write_Yaml_Updata(file, 'IP', ip)
         YamlWrite().Write_Yaml_Updata(file, 'Browser', browser)
         YamlWrite().Write_Yaml_Updata(file, 'ReportAddress', report_address)
@@ -68,8 +69,6 @@ class TestRunner(APIView):
         YamlWrite().Write_Yaml_Updata(file, 'Moudle', moudle)
         YamlWrite().Write_Yaml_Updata(file, 'Version', Version)
         YamlWrite().Write_Yaml_Updata(file, 'CaseNum', 1)
-
-
         RunnerTestCase().RunnerBeautifulReport()
         return Response({'code': 200, 'msg': '测试用例运行结束', 'data':ts_detail.data})
 

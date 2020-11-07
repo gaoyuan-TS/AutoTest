@@ -7,7 +7,6 @@
 """
 
 
-
 from openpyxl import load_workbook
 from datetime import datetime
 from ConfigRead import *
@@ -15,6 +14,8 @@ from utils.Logger import Logger
 from utils.ParseYaml import ParseYaml
 from openpyxl.drawing.image import Image
 import xlrd,time,os
+from utils.DirAndTime import DirAndTime
+from utils.funtion_timer import fn_timer
 
 logger = Logger('logger').getlog()
 
@@ -23,6 +24,7 @@ class ParseExcel(object):
     '''
     解析EXCEL文档
     '''
+
     def __init__(self, filename):
         self.filename = filename
         self.parseyaml = ParseYaml()
@@ -36,6 +38,7 @@ class ParseExcel(object):
         :param rowno:
         :return:
         """
+        print('getRowValue')
         try:
             # 获取sheetname对象
             sheetnames = self.wb[sheetname]
@@ -52,6 +55,7 @@ class ParseExcel(object):
             logger.info('读取失败，请检查工作表名以及行，列号')
         finally:
             self.wb.close()
+            print('结束getRowValue')
 
     def getColumnValue(self, sheetname, columnno):
         '''
@@ -350,8 +354,7 @@ class ParseExcel(object):
             self.wb.close()
 
 
-if __name__ == '__main__':
-    p = ParseExcel(r'D:\AutoTest\exceltemplate\测试.xlsx')
-    print('aaaa')
-    p.clearStepColumnValue('登录')
-    print('bbb')
+# if __name__ == '__main__':
+#     print('执行ParseExcel')
+#     p = ParseExcel(r'D:\AutoTest\exceltemplate\测试用例.xlsx')
+#     print('结束ParseExcel，开始',)

@@ -34,7 +34,7 @@ class DirAndTime(object):
         try:
             # 获取当前日期
             currentTime = datetime.now()
-            currentTime = currentTime.strftime('%Y-%m-%d/%H:%M:%S')
+            currentTime = currentTime.strftime('%Y-%m-%d-%H-%M-%S')
         except Exception as e:
             raise e
         else:

@@ -5,7 +5,7 @@
 @contact:1103313679@qq.com
 @time   :2020/5/12 15:34
 """
-
+from selenium.webdriver.common.keys import Keys
 
 from action.ObjectMap import ObjectMap
 from utils.DirAndTime import DirAndTime
@@ -16,7 +16,7 @@ from selenium.webdriver.common.by import By
 # from selenium.common.exceptions import *   # 导入所有异常类
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.action_chains import ActionChains   # 鼠标操作
+from selenium.webdriver.common.action_chains import ActionChains  # 鼠标操作
 from utils.Logger import Logger
 from ConfigRead import *
 from utils.ParseYaml import ParseYaml
@@ -66,6 +66,10 @@ class PageAction(object):
                 path = DRIVERS_PATH + 'chrome\\' + '77.0.3865.40\\chromedriver.exe'
             elif '78' == version:
                 path = DRIVERS_PATH + 'chrome\\' + '78.0.3904.11\\chromedriver.exe'
+            elif '79' == version:
+                path = DRIVERS_PATH + 'chrome\\' + '79.0.3945.16\\chromedriver.exe'
+            elif '86' == version:
+                path = DRIVERS_PATH + 'chrome\\' + '86.0.4240.22\\chromedriver.exe'
             else:
                 logger.info('浏览器版本不符合，请检查浏览器版本')
                 return
@@ -111,6 +115,10 @@ class PageAction(object):
                     path = DRIVERS_PATH + 'chrome\\' + '77.0.3865.40\\chromedriver.exe'
                 elif '78' == version:
                     path = DRIVERS_PATH + 'chrome\\' + '78.0.3904.11\\chromedriver.exe'
+                elif '79' == version:
+                    path = DRIVERS_PATH + 'chrome\\' + '79.0.3945.16\\chromedriver.exe'
+                elif '86' == version:
+                    path = DRIVERS_PATH + 'chrome\\' + '86.0.4240.22\\chromedriver.exe'
                 else:
                     logger.info('浏览器版本不符合，请检查浏览器版本')
                     return
@@ -139,7 +147,6 @@ class PageAction(object):
         logger.info('退出浏览器')
         print('退出浏览器')
         self.driver.quit()
-
 
     def closeBrowser(self):
         logger.info('关闭当前页面')
@@ -172,8 +179,8 @@ class PageAction(object):
         '''
         # try:
         self.driver.forward()
-        logger.info('前进到%s'%self.driver.current_url)
-        print('前进到%s'%self.driver.current_url)
+        logger.info('前进到%s' % self.driver.current_url)
+        print('前进到%s' % self.driver.current_url)
         # except Exception as e:
         #     logger.info('前进页面失败')
         #     print('前进页面失败')
@@ -268,8 +275,6 @@ class PageAction(object):
         print('输入框输入%s' % value)
         ObjectMap(self.driver).getElement(by, locator).send_keys(value)
 
-
-
     def uploadFile(self, by, locator, value):
         '''
         上传单个文件
@@ -292,7 +297,7 @@ class PageAction(object):
         '''
         for root, dirs, files in os.walk(value):
             for i in files:
-                ObjectMap(self.driver).getElement(by, locator).send_keys(value+'\\'+i)
+                ObjectMap(self.driver).getElement(by, locator).send_keys(value + '\\' + i)
                 logger.info('上传文件%s' % i)
                 print('上传文件%s' % i)
 
@@ -445,8 +450,8 @@ class PageAction(object):
         :return:
         '''
         assert self.driver.current_url == Url
-        logger.info('%s==%s'%(self.driver.current_url, Url))
-        print('%s==%s'%(self.driver.current_url, Url))
+        logger.info('%s==%s' % (self.driver.current_url, Url))
+        print('%s==%s' % (self.driver.current_url, Url))
 
     def getTitle(self):
         """
@@ -512,14 +517,13 @@ class PageAction(object):
         屏幕截图
         :return:
         """
-        picturename =SCREENSHOTS_PATH +file+'\\'+casename
+        picturename = SCREENSHOTS_PATH + file + '\\' + casename
         if not os.path.exists(picturename):
             os.makedirs(picturename)
             picturename = picturename + '\\' + DirAndTime.getCurrentTime() + '.png'
         else:
             picturename = picturename + '\\' + DirAndTime.getCurrentTime() + '.png'
         try:
-            
             self.driver.get_screenshot_as_file(picturename)
         except Exception as e:
             print(e)
@@ -534,7 +538,8 @@ class PageAction(object):
         '''
         # try:
         if by.lower() in self.byDic:
-            element = WebDriverWait(self.driver, 60).until(EC.presence_of_element_located((self.byDic[by.lower()], locator)))
+            element = WebDriverWait(self.driver, 30).until(
+                EC.presence_of_element_located((self.byDic[by.lower()], locator)))
             return element
         # except NoSuchElementException:
         #     logger.exception('找不到元素')
@@ -554,7 +559,8 @@ class PageAction(object):
         '''
         # try:
         if by.lower() in self.byDic:
-            element = WebDriverWait(self.driver, 60).until_not(EC.presence_of_element_located((self.byDic[by.lower()], locator)))
+            element = WebDriverWait(self.driver, 30).until_not(
+                EC.presence_of_element_located((self.byDic[by.lower()], locator)))
             return element
         # except NoSuchElementException:
         #     logger.exception('找不到元素')
@@ -574,7 +580,8 @@ class PageAction(object):
         '''
         # try:
         if by.lower() in self.byDic:
-            element = WebDriverWait(self.driver, 60).until(EC.text_to_be_present_in_element(self.byDic[by.lower()], locator))
+            element = WebDriverWait(self.driver, 30).until(
+                EC.text_to_be_present_in_element(self.byDic[by.lower()], locator))
             return element
         # except NoSuchElementException:
         #     logger.exception('找不到元素')
@@ -594,7 +601,8 @@ class PageAction(object):
         '''
         # try:
         if by.lower() in self.byDic:
-            element = WebDriverWait(self.driver, 60).until_not(EC.text_to_be_present_in_element(self.byDic[by.lower()], locator))
+            element = WebDriverWait(self.driver, 30).until_not(
+                EC.text_to_be_present_in_element(self.byDic[by.lower()], locator))
             return element
         # except NoSuchElementException:
         #     logger.exception('找不到元素')
@@ -615,18 +623,47 @@ class PageAction(object):
         element = self.driver.find_element(by, locator)
         t = self.driver.find_element(by, locator).text
         ActionChains(self.driver).move_to_element(element).perform()
-        logger.info("鼠标悬浮在%s" %t)
-        print("鼠标悬浮在%s" %t)
+        logger.info("鼠标悬浮在%s" % t)
+        print("鼠标悬浮在%s" % t)
         # except:
         #     logger.exception("未找到元素")
         #     print("未找到元素")
 
-    def scrollTop(self):
-        js = "var q=document.documentElement.scrollTop=10000"
+    def dropDown(self, p):
+        """
+        边框下拉滑动
+        :param p:
+        :return:
+        """
+        js = "var q=document.documentElement.scrollTop=%s" % p
         self.driver.execute_script(js)
-        time.sleep(3)
+        logger.info("滑动下拉框-距离%s" % p)
+        print("滑动下拉框-距离%s" % p)
+
+    def scroll_top(self):
+        '''滚动到顶部'''
         js = "var q=document.documentElement.scrollTop=0"
         self.driver.execute_script(js)
+
+    def scroll_end(self):
+        '''滚动到底部'''
+        js = "window.scrollTo(0,document.body.scrollHeight)"
+        self.driver.execute_script(js)
+
+    def Enter(self, by, locator):
+        # 模拟键盘回车
+        ObjectMap(self.driver).getElement(by, locator).send_keys(Keys.ENTER)
+
+    def Down_end(self,count):
+        '''
+        模拟按下键盘的 下 箭头 方向键
+        :return:
+        '''
+        for i in range(count):
+            self.driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')
+            ActionChains(self.driver).key_down(Keys.DOWN).perform()
+
+
 
 
 if __name__ == '__main__':
@@ -650,31 +687,32 @@ if __name__ == '__main__':
     # # p.inputValue('name', 'account', '123')
     # p.assertEqule('css', '.errorTip', '注册码异常 Error Code : 102')
     try:
-
         p = PageAction()
-        p.openBrowser()
+        # p.openBrowsers('Google Chrome')
+        p.openBrowsers('FireFox')
+
         o = ObjectMap(p.driver)
         p.getUrl("http://zs-beta.cntracechain.com/#/login")
+        # p.getUrl("https://blog.csdn.net/chenzhf_0122/article/details/102963372")
+
         p.driver.maximize_window()
+        p.driver.implicitly_wait(10)
+        p.inputValue('xpath', '/html/body/div/div/section/main/div/div[2]/div/div/div[3]/form/div/div[2]/div/div/input',
+                     'gaoyuan')
+        p.inputValue('xpath', '/html/body/div/div/section/main/div/div[2]/div/div/div[3]/form/div/div[3]/div/div/input',
+                     'zs666666')
 
-        p.inputValue('xpath', '/html/body/div/div/section/main/div/div[2]/div/div/div[3]/form/div/div[2]/div/div/input','gaoyuan')
-        p.inputValue('xpath', '/html/body/div/div/section/main/div/div[2]/div/div/div[3]/form/div/div[3]/div/div/input','zs666666')
-        p.click('xpath','/html/body/div/div/section/main/div/div[2]/div/div/div[3]/form/div/div[5]/div/button')
-        p.driver.get_screenshot_as_file(u"D:\AutoTest\screenshots\登录\test_login_1\test.png")
-        p.sleep(2)
-        p.click('xpath','/html/body/div/div/section/section/main/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div/span')
-        p.click('xpath','/html/body/div/div/section/section/main/div[2]/div[1]/button')
-        p.sleep(5)
-        print('开始script-----------')
-        p.scrollTop()
-        time.sleep(3)
-        print('结束script-----------')
-        p.sleep(2)
-        p.inputValue('xpath','/html/body/div/div/section/section/main/div[2]/div/div[2]/div[2]/div[1]/div[2]/div/div','D:\测试素材\商家资料\logo1.jpg')
-        p.sleep(2)
+        p.click('xpath','//*[@id="login"]/section/main/div/div[2]/div/div/div[3]/form/div/div[5]/div/button')
 
-
-        p.sleep(5)
+        p.click('xpath', '//*[@id="home"]/section/section/main/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div/span')
+        p.sleep(2)
+        p.click('xpath', '//*[@id="home"]/section/section/main/div[2]/div[1]/button')
+        p.sleep(2)
+        print('下拉到底部')
+        p.Down_end(4)
+        p.sleep(2)
+        p.uploadFile('xpath', '//*[@id="home"]/section/section/main/div[2]/div/div[2]/div[3]/div[1]/div[2]/div[1]/div/input',r'‪D:\1.jpg')
+        p.sleep(2)
     except Exception as e:
         print(e)
     finally:
