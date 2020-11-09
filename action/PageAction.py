@@ -22,12 +22,14 @@ from ConfigRead import *
 from utils.ParseYaml import ParseYaml
 import time
 import os
+import win32gui
+import win32con
+import constants
 
 logger = Logger('logger').getlog()
 
 
 class PageAction(object):
-
     def __init__(self):
         self.parseyaml = ParseYaml()
         self.byDic = {
@@ -277,7 +279,7 @@ class PageAction(object):
 
     def uploadFile(self, by, locator, value):
         '''
-        上传单个文件
+        上传单个文件input标签  type="file"
         :param by:
         :param locator:
         :param value:
@@ -289,7 +291,7 @@ class PageAction(object):
 
     def uploadFiles(self, by, locator, value):
         '''
-        上传多个文件，value为文件夹路径，
+        上传多个文件，value为文件夹路径，input标签
         :param by:
         :param locator:
         :param value:
@@ -300,6 +302,19 @@ class PageAction(object):
                 ObjectMap(self.driver).getElement(by, locator).send_keys(value + '\\' + i)
                 logger.info('上传文件%s' % i)
                 print('上传文件%s' % i)
+
+    def upload_file_windows(self, file_path):
+        '''
+        :param file_path:上传文件的路径,需点击打开上传按钮，弹出windows窗口再调用 chrome 可调用
+        :return:
+        '''
+        dialog = win32gui.FindWindow("#32770", u"打开") #窗口左上角文字
+        comboxex32 = win32gui.FindWindowEx(dialog, 0, "ComboBoxEx32", None)
+        combox = win32gui.FindWindowEx(comboxex32, 0, "ComboBox", None)
+        edit = win32gui.FindWindowEx(combox, 0, "Edit", None)
+        button = win32gui.FindWindowEx(dialog, 0, "Button", "打开(&0)")
+        win32gui.SendMessage(edit, win32con.WM_SETTEXT, None, file_path)
+        win32gui.SendMessage(dialog, win32con.WM_COMMAND, 1, button)
 
     def assertTitle(self, titlestr):
         """
@@ -654,16 +669,14 @@ class PageAction(object):
         # 模拟键盘回车
         ObjectMap(self.driver).getElement(by, locator).send_keys(Keys.ENTER)
 
-    def Down_end(self,count):
+    def Down_end(self, count):
         '''
-        模拟按下键盘的 下 箭头 方向键
+        模拟按下键盘的 下 箭头 方向键,count 为按下的次数
         :return:
         '''
         for i in range(count):
             self.driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')
             ActionChains(self.driver).key_down(Keys.DOWN).perform()
-
-
 
 
 if __name__ == '__main__':
@@ -682,19 +695,16 @@ if __name__ == '__main__':
     # p.click('css', '.linkColor')
     # p.inputValue('name', 'register', 'CCtd-rZOk-adWi-f3zK-R3O6-mF+X-tg5h-A4dd')
     # p.click('id','registBtn')
-    # # p.inputValue('css', '.formTil', '123456')
-    # # p.assertLen('css', '.formTil', '4')
-    # # p.inputValue('name', 'account', '123')
+    # p.inputValue('css', '.formTil', '123456')
+    # p.assertLen('css', '.formTil', '4')
+    # p.inputValue('name', 'account', '123')
     # p.assertEqule('css', '.errorTip', '注册码异常 Error Code : 102')
     try:
         p = PageAction()
         # p.openBrowsers('Google Chrome')
-        p.openBrowsers('FireFox')
-
+        p.openBrowsers('Google Chrome')
         o = ObjectMap(p.driver)
         p.getUrl("http://zs-beta.cntracechain.com/#/login")
-        # p.getUrl("https://blog.csdn.net/chenzhf_0122/article/details/102963372")
-
         p.driver.maximize_window()
         p.driver.implicitly_wait(10)
         p.inputValue('xpath', '/html/body/div/div/section/main/div/div[2]/div/div/div[3]/form/div/div[2]/div/div/input',
@@ -702,7 +712,7 @@ if __name__ == '__main__':
         p.inputValue('xpath', '/html/body/div/div/section/main/div/div[2]/div/div/div[3]/form/div/div[3]/div/div/input',
                      'zs666666')
 
-        p.click('xpath','//*[@id="login"]/section/main/div/div[2]/div/div/div[3]/form/div/div[5]/div/button')
+        p.click('xpath', '//*[@id="login"]/section/main/div/div[2]/div/div/div[3]/form/div/div[5]/div/button')
 
         p.click('xpath', '//*[@id="home"]/section/section/main/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div/span')
         p.sleep(2)
@@ -710,14 +720,13 @@ if __name__ == '__main__':
         p.sleep(2)
         print('下拉到底部')
         p.Down_end(4)
-        p.sleep(2)
-        p.uploadFile('xpath', '//*[@id="home"]/section/section/main/div[2]/div/div[2]/div[3]/div[1]/div[2]/div[1]/div/input',r'‪D:\1.jpg')
-        p.sleep(2)
+        p.click('xpath', '/html/body/div/div/section/section/main/div[2]/div/div[2]/div[3]/div[1]/div[2]/div[1]/div')
+        print('上传图片')
+        p.sleep(5)
+        p.upload_file_windows(r'C:\Users\Administrator\Desktop\1.jpg')
+        p.sleep(4)
     except Exception as e:
         print(e)
     finally:
         p.quitBrowser()
 
-    # p.not_wait_find_element('css', '.soutu-state-waiting.soutu-waiting')
-    # print(o.getElement('class', 'soutu-error-main').text)
-    # p.assertEqule('class', 'soutu-error-main', '抱歉，您上传的文件不是图片格式，请重新上传')
