@@ -26,7 +26,7 @@ class TestCaseRunnerDetail(models.Model):
     report_address = models.CharField('测试用例地址', max_length=100, null=False)
     loop = models.IntegerField('循环次数',default=1)
     importAddress = models.CharField('测试报告地址',max_length=100, )
-    moudle = models.CharField('运行的模块', max_length=15, default="全部")
+    moudles = models.CharField('运行的模块', max_length=15, default='全部')
     runner_time = models.DateTimeField('运行时间',auto_now_add=True)
 
 

@@ -6,6 +6,7 @@ from django.db import models
 class UserInfo(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField('姓名', max_length=20,null=False)
+    password = models.CharField('密码', max_length=20,null=False,default="123456")
     mobile = models.CharField('联系方式', max_length=20,null=False)
     email = models.CharField('邮箱', max_length=20,null=False)
     sex = models.IntegerField('性别', default=0)

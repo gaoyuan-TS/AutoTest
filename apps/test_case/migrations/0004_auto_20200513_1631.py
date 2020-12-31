@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
                 ('report_address', models.CharField(max_length=10, verbose_name='测试用例地址')),
                 ('loop', models.IntegerField(default=1, verbose_name='循环次数')),
                 ('importAddress', models.CharField(max_length=100, verbose_name='测试报告地址')),
-                ('moudle', models.DateTimeField(default='全部', max_length=15, verbose_name='运行的模块')),
+                ('moudle', models.CharField(default='全部', max_length=15, verbose_name='运行的模块')),
                 ('runner_time', models.DateTimeField(auto_now_add=True, verbose_name='运行时间')),
                 ('test_case', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='test_case.TestCase')),
             ],

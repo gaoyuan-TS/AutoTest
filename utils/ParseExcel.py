@@ -24,7 +24,6 @@ class ParseExcel(object):
     '''
     解析EXCEL文档
     '''
-
     def __init__(self, filename):
         self.filename = filename
         self.parseyaml = ParseYaml()
@@ -87,7 +86,7 @@ class ParseExcel(object):
         try:
             # 获取数据
             data = xlrd.open_workbook(self.filename)
-            # 获取所有sheet名字
+            # 获取sheet
             sheet_name = data.sheet_by_name(sheetname)
             # 获取总行数
             nrows = sheet_name.nrows  # 包括标题
@@ -145,6 +144,7 @@ class ParseExcel(object):
         finally:
             self.wb.close()
 
+
     def getCellObject(self, sheetname, rowno, columnno):
         """
         获取excel某一单元格的数据
@@ -184,7 +184,7 @@ class ParseExcel(object):
 
     def writeCellTime(self, sheetname, rowno, columnno):
         '''
-        向excel某一单元格写入数据
+        向excel某一单元格写入时间
         :param sheetname:
         :param rowno:
         :return:
@@ -354,7 +354,6 @@ class ParseExcel(object):
             self.wb.close()
 
 
-# if __name__ == '__main__':
-#     print('执行ParseExcel')
-#     p = ParseExcel(r'D:\AutoTest\exceltemplate\测试用例.xlsx')
-#     print('结束ParseExcel，开始',)
+if __name__ == '__main__':
+    p = ParseExcel(r'D:\AutoTest\exceltemplate\test.xlsx')
+    print(p.ismerge('Sheet1'))

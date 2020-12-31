@@ -3,9 +3,27 @@ from rest_framework.response import Response
 from rest_framework import generics, status
 from user_app.serializers import *
 from user_app.models import UserInfo
-import logs
+from utils.Token import Token
 
+import logs
+import hashlib
 # Create your views here.
+
+
+"""
+根据用户名密码登录
+"""
+class UserLogin(APIView):
+    def post(self,request):
+        user = request.data
+        username = user["username"]
+        password = user["password"]
+        token = Token(username).get_token()
+        try:
+            userinfo = UserInfo.objects.get(name =username ,password=password)
+            return Response({'code': 200, 'msg': 'success','token':token})
+        except:
+            return Response({'code': 401, 'msg': 'false','data': "用户名/密码不正确"})
 
 
 """
@@ -37,8 +55,17 @@ class UserSingById(APIView):
             userinfo = UserInfo.objects.get(id=pk)
         except:
             return Response({"message": "该用户不存在"})
-        ret = UserSerializerOther(userinfo)
-        return Response({'code': 200, 'msg': 'success'})
+        user = UserSerializerOther(userinfo)
+        # data = {
+        #     'id' : userinfo.id,
+        #     'name': userinfo.name,
+        #     'email':userinfo.email,
+        #     'mobile':userinfo.mobile,
+        #     'sex':userinfo.sex,
+        #     'creat_time':userinfo.creat_time
+        #
+        # }
+        return Response({'code': 200, 'msg': 'success','data': user.data})
 
 
 """
@@ -48,6 +75,7 @@ class UserSingById(APIView):
 
 class AddUser(APIView):
     def post(self, request):
+        data = request.data
         user = UserSerializerAll(data=request.data)
         # response = {'code': 200, 'msg': 'success', 'data': user.data}
         if user.is_valid():

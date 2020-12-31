@@ -24,6 +24,7 @@ import time
 import os
 import win32gui
 import win32con
+import xlrd
 import constants
 
 logger = Logger('logger').getlog()
@@ -259,7 +260,7 @@ class PageAction(object):
         # try:
         logger.info('输入框输入%s' % value)
         print('输入框输入%s' % value)
-        ObjectMap(self.driver).getElement(by, locator).send_keys(value)
+        ObjectMap(self.driver).getElement(locator).send_keys(value)
         # except Exception as e:
         #     logger.info('输入框输入值错误')
         #     print('输入框输入值错误')
@@ -680,53 +681,56 @@ class PageAction(object):
 
 
 if __name__ == '__main__':
-    # p = PageAction()
-    # p.openBrowser()
-    # o = ObjectMap(p.driver)
-    # p.saveScreeShot('登录', '侧四')
-    # p.getUrl('http://172.16.45.5')
-    # str = 'p.getUrl("http://www.baidu.com")'
-    # eval(str)
-    # p.click('class', 'soutu-btn')
-    # p.inputValue('class', 'upload-pic', r'D:\测试素材\商家资料\logo2.jpg')
-    # p.not_wait_find_element('css', '.soutu-state-waiting.soutu-waiting')
-    # print(o.getElement('class', 'soutu-error-main').text)
-    # p.assertEqule('class', 'soutu-error-main', '抱歉，您上传的文件不是图片格式，请重新上传')
-    # p.click('css', '.linkColor')
-    # p.inputValue('name', 'register', 'CCtd-rZOk-adWi-f3zK-R3O6-mF+X-tg5h-A4dd')
-    # p.click('id','registBtn')
-    # p.inputValue('css', '.formTil', '123456')
-    # p.assertLen('css', '.formTil', '4')
-    # p.inputValue('name', 'account', '123')
-    # p.assertEqule('css', '.errorTip', '注册码异常 Error Code : 102')
-    try:
-        p = PageAction()
-        # p.openBrowsers('Google Chrome')
-        p.openBrowsers('Google Chrome')
-        o = ObjectMap(p.driver)
-        p.getUrl("http://zs-beta.cntracechain.com/#/login")
-        p.driver.maximize_window()
-        p.driver.implicitly_wait(10)
-        p.inputValue('xpath', '/html/body/div/div/section/main/div/div[2]/div/div/div[3]/form/div/div[2]/div/div/input',
-                     'gaoyuan')
-        p.inputValue('xpath', '/html/body/div/div/section/main/div/div[2]/div/div/div[3]/form/div/div[3]/div/div/input',
-                     'zs666666')
 
-        p.click('xpath', '//*[@id="login"]/section/main/div/div[2]/div/div/div[3]/form/div/div[5]/div/button')
+    # try:
+    #     p = PageAction()
+    #     # p.openBrowsers('Google Chrome')
+    #     p.openBrowsers('Google Chrome')
+    #     o = ObjectMap(p.driver)
+    #     p.getUrl("http://zs-beta.cntracechain.com/#/login")
+    #     p.driver.maximize_window()
+    #     p.driver.implicitly_wait(10)
+    #     p.inputValue('xpath', '/html/body/div/div/section/main/div/div[2]/div/div/div[3]/form/div/div[2]/div/div/input',
+    #                  'gaoyuan')
+    #     p.inputValue('xpath', '/html/body/div/div/section/main/div/div[2]/div/div/div[3]/form/div/div[3]/div/div/input',
+    #                  'zs666666')
+    #
+    #     p.click('xpath', '//*[@id="login"]/section/main/div/div[2]/div/div/div[3]/form/div/div[5]/div/button')
+    #
+    #     p.click('xpath', '//*[@id="home"]/section/section/main/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div/span')
+    #     p.sleep(2)
+    #     p.click('xpath', '//*[@id="home"]/section/section/main/div[2]/div[1]/button')
+    #     p.sleep(2)
+    #     print('下拉到底部')
+    #     p.Down_end(4)
+    #     p.click('xpath', '/html/body/div/div/section/section/main/div[2]/div/div[2]/div[3]/div[1]/div[2]/div[1]/div')
+    #     print('上传图片')
+    #     p.sleep(5)
+    #     p.upload_file_windows(r'C:\Users\Administrator\Desktop\1.jpg')
+    #     p.sleep(4)
+    # except Exception as e:
+    #     print(e)
+    # finally:
+    #     p.quitBrowser()
+    path = 'D:\AutoTest\exceltemplate\测试.xlsx'
+    book_data = xlrd.open_workbook(path)
+    book_sheet = book_data.sheet_by_index(0)
+    nrows = book_sheet.nrows
+    ncols = book_sheet.ncols
+    row1 = book_sheet.row_values(0)
+    col = book_sheet._maxdatacolx
+    # col = len(row1)
+    print(row1)
+    print(col)
+    list = []
+    for x in range(1,nrows):
+        row_value = book_sheet.row_values(x)
+        row_dis ={}
+        for y in range(0,col):
+            row_dis[row1[y]] = row_value[y]
+            list.append(row_dis)
 
-        p.click('xpath', '//*[@id="home"]/section/section/main/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div/span')
-        p.sleep(2)
-        p.click('xpath', '//*[@id="home"]/section/section/main/div[2]/div[1]/button')
-        p.sleep(2)
-        print('下拉到底部')
-        p.Down_end(4)
-        p.click('xpath', '/html/body/div/div/section/section/main/div[2]/div/div[2]/div[3]/div[1]/div[2]/div[1]/div')
-        print('上传图片')
-        p.sleep(5)
-        p.upload_file_windows(r'C:\Users\Administrator\Desktop\1.jpg')
-        p.sleep(4)
-    except Exception as e:
-        print(e)
-    finally:
-        p.quitBrowser()
-
+    print(list)
+    # for y in range(0,ncols):
+    #     col_value = book_sheet.col_values(y)
+    #     print(col_value)

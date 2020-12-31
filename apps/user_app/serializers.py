@@ -20,7 +20,7 @@ class UserSerializerAll(serializers.ModelSerializer):
 
 class UserSerializerOther(serializers.ModelSerializer):
     class Meta:
-        fields = ['id', 'name', 'mobile', 'email', 'sex']
+        fields = ['id', 'name', 'mobile', 'email', 'sex','creat_time']
         model = UserInfo
         extra_kwargs = {'id': {'required': False}}
 

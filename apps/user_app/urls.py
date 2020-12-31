@@ -7,4 +7,6 @@ urlpatterns = [
     path('insert', AddUser.as_view()),
     path('delete/<int:pk>', DelectUserById.as_view()),
     path('update/<int:pk>', UpdataUserById.as_view()),
+    path('login', UserLogin.as_view()),
+
 ]
