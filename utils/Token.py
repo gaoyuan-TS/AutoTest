@@ -29,8 +29,6 @@ class Token(object):
         hl = hashlib.md5()
         hl.update(strs.encode("utf8"))
         token = hl.hexdigest()
-        print('MD5加密前',strs)
-        print('MD5加密后',token)
         return token
 
 if __name__ == '__main__':

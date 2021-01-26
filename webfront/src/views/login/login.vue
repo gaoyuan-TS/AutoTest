@@ -28,14 +28,14 @@
             <!-- 输入框 -->
             <div class="lgD">
                 <i class = 'iconfont icon-denglu '></i>
-                <input type="text" placeholder="输入用户名" v-model="username"/>
+                <input type="text" placeholder="输入用户名" v-model="loginForm.username"/>
             </div>
             <div class="lgD">
                 <i class = 'iconfont icon-mima54'></i>
-                <input type="password" placeholder="输入用户密码" v-model="password" />
+                <input type="password" placeholder="输入用户密码" v-model="loginForm.password" />
             </div>
             <div class="logC">
-                <a><button @click="login(username,password)">登 录</button></a>
+                <a><button @click="login">登 录</button></a>
             </div>
         </div>
     </div>
@@ -44,33 +44,65 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 export default {
-    name: 'login',
-    data:
-        {
-          username: '',
-          password: ''
-      },
-    methods:{
-      login(username,password) {
-          if(this.username == 'gaoyuan' || this.password == 'zs123456') {
-              this.$router.replace('../home');
-          }else (
-              alert("用户名/密码错误")
-          )
-        
-      },
+    data() {
+        return  {
+            loginForm:{
+                username: '',
+                password: ''
+                }
+                   
+            };
 
-      
+    },
+        
+    methods:{
+        ...mapMutations(['changeLogin']),
+      login: function() {
+            let _this = this;
+            if (this.loginForm.username === '' ) {
+                this.$message.error("用户名不能为空");
+            }
+            else if ( this.loginForm.password === '') {
+                this.$message.error("密码不能为空");
+            }
+
+            else  {
+                _this.$axios({
+                    method: 'post',
+                    url: '/users/login',
+                    data: _this.loginForm
+                }).then(res =>{
+                    console.log(res.data);
+                    if (res.data.code != '200') {
+                        this.$message.error(res.data.data);
+                        
+                    }
+                        
+                    else if (res.data.code =='200') {
+                        this.$message.success('登录成功')
+                        // _this.userToken = 'Bearer' + res.data.data.body.token;
+                        // //将用户token保存到vuex中
+                        // _this.changLogin({Authorization: _this_userToken});
+                        _this.$router.push('../home')
+                        
+                    }
+                }).catch(error => {
+                    this.$message.error('登录失败');
+                })
+            }
+            }     
+      },
     }
-}
+
 
 </script>
 
 <style scoped>
     .bkimage{
         background-size:100%;
-        background: url('../../assets/image/2.jpg') no-repeat;
+        background: url("../../assets/image/background.jpg") no-repeat;
         width: 100%;
         height: 100%;
         position: absolute;
@@ -109,9 +141,10 @@ export default {
         width: 100%;
         height: 45px;
         background-color: #ee7700;
-        border: none;
         color: white;
         font-size: 18px;
+        border:0px;
+        outline: #f37b04
     }
 
     .logGet .logD.logDtip .p1 {
@@ -150,7 +183,7 @@ export default {
         color: rgb(22, 17, 17);
         border-style:solid;
         border-color: #03a9f4;
-      	box-shadow: 0 0 15px #03a9f4;
+      	box-shadow: 0 0 5px #03a9f4;
         outline:none
 
     }
@@ -170,6 +203,7 @@ export default {
         margin-right: auto;
         margin-bottom: 0px;
         margin-left: auto;
+        border:0px;
     }
 
 

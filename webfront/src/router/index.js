@@ -3,7 +3,8 @@ import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
 import login from '@/views/login/login'
 import home from '@/views/home/home'
-
+import one from '@/components/one.vue'
+import two from '@/components/two.vue'
 
 
 
@@ -31,12 +32,12 @@ export default new Router({
         {
           path: '/one',
           name: 'one',
-          component: () => import('../components/one.vue')
+          component:one
         },
         {
           path: '/two',
           name: 'two',
-          component: () => import('../components/one.vue')
+          component: two
         }
       ]
     }

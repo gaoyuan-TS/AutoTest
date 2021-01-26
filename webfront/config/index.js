@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         '/': {       
-         target: 'http://127.0.0.1:8000',  // 真实请求的地址   
+         target: 'http://localhost:8000',  // 真实请求的地址   
          changeOrigin: true,  // 是否跨域    
 
       }

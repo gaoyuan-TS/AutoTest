@@ -7,3 +7,6 @@ venv
 geckodriver.log
 .vscode
 webfront/node_modules/*
+screenshots
+webfront/.git
+webfront/.vscode

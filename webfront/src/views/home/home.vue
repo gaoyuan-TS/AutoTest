@@ -1,112 +1,95 @@
 <template>
-    <div class="layout">
-        <Layout>
-            <Header>
-                <Menu mode="horizontal" theme="dark" active-name="1">
-                    <div class="layout-logo"></div>
-                    <div class="layout-nav">
-                        <MenuItem name="1">
-                        <Icon type="ios-navigate"></Icon>
-                        Item 1
-                        </MenuItem>
-                        <MenuItem name="2">
-                        <Icon type="ios-keypad"></Icon>
-                        Item 2
-                        </MenuItem>
-                        <MenuItem name="3">
-                        <Icon type="ios-analytics"></Icon>
-                        Item 3
-                        </MenuItem>
-                        <MenuItem name="4">
-                        <Icon type="ios-paper"></Icon>
-                        Item 4
-                        </MenuItem>
-                    </div>
-                </Menu>
-            </Header>
-            <Layout>
-                <Sider hide-trigger :style="{background: '#fff'}">
-                    <Menu active-name="1-2" theme="light" width="auto" :open-names="['1']">
-                        <Submenu name="1">
-                            <template slot="title">
-                                <Icon type="ios-navigate"></Icon>
-                                Item 1
-                            </template>
-                            
-                            <router-link to="/one">
-                                <MenuItem name="1-1">Option 1</MenuItem>
-                            </router-link>
-                            <router-link to="/two">
-                                <MenuItem name="1-2">Option 2</MenuItem>
-                            </router-link>
-                            
-                            <MenuItem name="1-3">Option 3</MenuItem>
-                        </Submenu>
-                        <Submenu name="2">
-                            <template slot="title">
-                                <Icon type="ios-keypad"></Icon>
-                                Item 2
-                            </template>
-                            <MenuItem name="2-1">Option 1</MenuItem>
-                            <MenuItem name="2-2">Option 2</MenuItem>
-                        </Submenu>
-                        <Submenu name="3">
-                            <template slot="title">
-                                <Icon type="ios-analytics"></Icon>
-                                Item 3
-                            </template>
-                            <MenuItem name="3-1">Option 1</MenuItem>
-                            <MenuItem name="3-2">Option 2</MenuItem>
-                        </Submenu>
-                    </Menu>
-                </Sider>
-                <Layout :style="{padding: '0 24px 24px'}">
-                    <Breadcrumb :style="{margin: '24px 0'}">
-                        <BreadcrumbItem>Home</BreadcrumbItem>
-                        <BreadcrumbItem>Components</BreadcrumbItem>
-                        <BreadcrumbItem>Layout</BreadcrumbItem>
-                    </Breadcrumb>
-                    <Content :style="{padding: '24px', minHeight: '480px', background: '#fff'}">
-                        <!-- 渲染组件 -->
-                        <router-view></router-view>
-                    </Content>
-                </Layout>
-            </Layout>
-        </Layout>
-    </div>
+    <el-container>
+    
+        <el-header>Header</el-header>
+        <el-main>
+            <el-row>
+            <el-button>默认按钮</el-button>
+            <el-button type="primary">主要按钮</el-button>
+            <el-button type="success">成功按钮</el-button>
+            <el-button type="info">信息按钮</el-button>
+            <el-button type="warning">警告按钮</el-button>
+            <el-button type="danger">危险按钮</el-button>
+            </el-row>
+
+            <el-row>
+            <el-button plain>朴素按钮</el-button>
+            <el-button type="primary" plain>主要按钮</el-button>
+            <el-button type="success" plain>成功按钮</el-button>
+            <el-button type="info" plain>信息按钮</el-button>
+            <el-button type="warning" plain>警告按钮</el-button>
+            <el-button type="danger" plain>危险按钮</el-button>
+            </el-row>
+
+            <el-row>
+            <el-button round>圆角按钮</el-button>
+            <el-button type="primary" round>主要按钮</el-button>
+            <el-button type="success" round>成功按钮</el-button>
+            <el-button type="info" round>信息按钮</el-button>
+            <el-button type="warning" round>警告按钮</el-button>
+            <el-button type="danger" round>危险按钮</el-button>
+            </el-row>
+
+            <el-row>
+            <el-button icon="el-icon-search" circle></el-button>
+            <el-button type="primary" icon="el-icon-edit" circle></el-button>
+            <el-button type="success" icon="el-icon-check" circle></el-button>
+            <el-button type="info" icon="el-icon-message" circle></el-button>
+            <el-button type="warning" icon="el-icon-star-off" circle></el-button>
+            <el-button type="danger" icon="el-icon-delete" circle></el-button>
+            </el-row>
+
+
+            <div>
+                <el-link href="https://element.eleme.io" target="_blank">默认链接</el-link>
+                <el-link type="primary">主要链接</el-link>
+                <el-link type="success">成功链接</el-link>
+                <el-link type="warning">警告链接</el-link>
+                <el-link type="danger">危险链接</el-link>
+                <el-link type="info">信息链接</el-link>
+            </div>
+        </el-main>
+        <el-footer>Footer</el-footer>
+    </el-container>
 </template>
 
-<script>
-export default {
-    name: 'home'
-}
-</script>
 
 
 
 <style scoped>
 
-    .layout{
-    border: 1px solid #d7dde4;
-    background: #f5f7f9;
-    position: relative;
-    border-radius: 4px;
-    overflow: hidden;
-}
-    .layout-logo{
-        width: 100px;
-        height: 30px;
-        background: #5b6270;
-        border-radius: 3px;
-        float: left;
-        position: relative;
-        top: 15px;
-        left: 20px;
-    }
-    .layout-nav{
-        width: 420px;
-        margin: 0 auto;
-        margin-right: 20px;
-    }
-
+  .el-header, .el-footer {
+    background-color: #B3C0D1;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+  }
+  
+  .el-aside {
+    background-color: #D3DCE6;
+    color: #333;
+    text-align: center;
+    line-height: 200px;
+  }
+  
+  .el-main {
+    background-color: #E9EEF3;
+    color: #333;
+    text-align: center;
+    line-height: 160px;
+  }
+  
+  body > .el-container {
+    margin-bottom: 40px;
+  }
+  
+  .el-container:nth-child(5) .el-aside,
+  .el-container:nth-child(6) .el-aside {
+    line-height: 260px;
+  }
+  
+  .el-container:nth-child(7) .el-aside {
+    line-height: 320px;
+  }
 </style>
+

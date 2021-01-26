@@ -260,8 +260,8 @@ class PageAction(object):
         # try:
         logger.info('输入框输入%s' % value)
         print('输入框输入%s' % value)
-        ObjectMap(self.driver).getElement(locator).send_keys(value)
-        # except Exception as e:
+        ObjectMap(self.driver).getElement(by,locator).send_keys(value)
+        # except Exception as e,
         #     logger.info('输入框输入值错误')
         #     print('输入框输入值错误')
         #     print(e)
@@ -566,6 +566,7 @@ class PageAction(object):
         # except:
         #     logger.exception('查找失败')
         #     print('查找失败')
+
 
     def not_wait_find_element(self, by, locator):
         '''

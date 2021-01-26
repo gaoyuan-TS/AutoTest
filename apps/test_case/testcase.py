@@ -50,7 +50,7 @@ class RunnerTestCase(unittest.TestCase):
     def test_Case(self):
         print('执行test_Case'+ DirAndTime.getCurrentTime())
         try:
-            self.setUp()
+            # self.setUp()
             # 获取循环次数
             loop = int(self.parseyaml.ReadParameter('loop'))
             # 获取模块名
@@ -520,7 +520,7 @@ class RunnerTestCase(unittest.TestCase):
                     # 获取excel中'用例工作表'列的不为None的总行数
                     total_case = list(filter(None, self.parseexcel.getColumnValue(self.sheetnames[0], testCase_Sheet)))
                     # 写入excel表的总用例数单元格中
-                    self.parseexcel.writeCellValue(self.sheetnames[0], 1, 3, len(total_case)-1)
+                    self.parseexcel.writeCellValue(self.sheetnames[0], 1, 2, len(total_case)-1)
                     # 循环执行结果列中为pass的列
                     pass_case = []
                     faild_case = []
@@ -532,16 +532,16 @@ class RunnerTestCase(unittest.TestCase):
                         else:
                             continue
                     # 写入excel表中的通过用例数单元格中
-                    self.parseexcel.writeCellValue(self.sheetnames[0], 1, 5, len(pass_case))
+                    self.parseexcel.writeCellValue(self.sheetnames[0], 1, 4, len(pass_case))
                     # 写入excel表中的失败用例数单元格中
-                    self.parseexcel.writeCellValue(self.sheetnames[0], 1, 7, len(faild_case))
+                    self.parseexcel.writeCellValue(self.sheetnames[0], 1, 6, len(faild_case))
                     # 循环是否执行列的中n的数量
                     n_case = []
                     for ni in list(filter(None, self.parseexcel.getColumnValue(self.sheetnames[0], testCase_Isimplement))):
                         if ni.lower() == 'n':
                             n_case.append(ni)
                     # 写入excel表中的未测试用例的单元格中
-                    self.parseexcel.writeCellValue(self.sheetnames[0], 1, 9, len(n_case))
+                    self.parseexcel.writeCellValue(self.sheetnames[0], 1, 8, len(n_case))
                 except Exception as e:
                     logger.info(e)
                     self.pageaction.quitBrowser()

@@ -1,8 +1,8 @@
-IP: zs-beta.cntracechain.com/#/login
-Browser: Google Chrome
+IP: http://www.baidu.com
+Browser: FireFox
 ReportAddress: D:\AutoTest\report\
 loop: 1
 ImportAddress: "D:\\AutoTest\\exceltemplate\\\u6D4B\u8BD5\u7528\u4F8B.xlsx"
-Moudle: "\u5168\u90E8"
-Version: '86'
-CaseNum: 2
+Moudle:
+Version:
+CaseNum: 1
