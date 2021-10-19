@@ -26,7 +26,7 @@ mock==4.0.2
 monotonic==1.5
 multi-key-dict==2.0.3
 mysqlclient==1.4.6
-nameko==2.12.0
+nameko==2.14.0
 openpyxl==3.0.3
 paramiko==2.7.1
 path==15.0.0
